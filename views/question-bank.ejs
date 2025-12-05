@@ -1,0 +1,96 @@
+<%- include('partials/header') %>
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+  <div class="container-fluid px-4">
+    <a class="navbar-brand d-flex align-items-center" href="/dashboard">
+      <div class="logo-icon">
+        <i class="fas fa-code"></i>
+      </div>
+      <span class="ms-2 fw-bold">Skill Up</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="prepareDropdown" role="button" data-bs-toggle="dropdown">
+            Prepare
+          </a>
+          <ul class="dropdown-menu">
+            <li><h6 class="dropdown-header">Programming Languages</h6></li>
+            <li><a class="dropdown-item" href="/prepare/python">Python</a></li>
+            <li><a class="dropdown-item" href="/prepare/java">Java</a></li>
+            <li><a class="dropdown-item" href="/prepare/cpp">C++</a></li>
+            <li><a class="dropdown-item" href="/prepare/javascript">JavaScript</a></li>
+            <li><a class="dropdown-item" href="/prepare/c">C</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><h6 class="dropdown-header">Core CS Concepts</h6></li>
+            <li><a class="dropdown-item" href="/prepare/data-structures">Data Structures</a></li>
+            <li><a class="dropdown-item" href="/prepare/algorithms">Algorithms</a></li>
+            <li><a class="dropdown-item" href="/prepare/oops">OOP Concepts</a></li>
+            <li><a class="dropdown-item" href="/prepare/dbms">DBMS</a></li>
+            <li><a class="dropdown-item" href="/prepare/os">Operating Systems</a></li>
+            <li><a class="dropdown-item" href="/prepare/cn">Computer Networks</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><h6 class="dropdown-header">Development</h6></li>
+            <li><a class="dropdown-item" href="/prepare/web-dev">Web Development</a></li>
+            <li><a class="dropdown-item" href="/prepare/system-design">System Design</a></li>
+            <li><a class="dropdown-item" href="/prepare/interview-prep">Interview Prep</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="mockTestDropdown" role="button" data-bs-toggle="dropdown">
+            Mock Test
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="/mock-test/coding">Coding Tests</a></li>
+            <li><a class="dropdown-item" href="/mock-test/technical">Technical Tests</a></li>
+            <li><a class="dropdown-item" href="/mock-test/behavioral">Behavioral Tests</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle active" href="#" id="questionBankDropdown" role="button" data-bs-toggle="dropdown">
+            Question Bank
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="/question-bank/data-structures">Data Structures</a></li>
+            <li><a class="dropdown-item" href="/question-bank/algorithms">Algorithms</a></li>
+            <li><a class="dropdown-item" href="/question-bank/system-design">System Design</a></li>
+            <li><a class="dropdown-item" href="/question-bank/all">All Questions</a></li>
+          </ul>
+        </li>
+      </ul>
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" id="userDropdown" role="button" data-bs-toggle="dropdown">
+            <div class="user-avatar-circle">
+              <%= userName ? userName.charAt(0).toUpperCase() : 'U' %>
+            </div>
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li><a class="dropdown-item" href="/profile"><i class="fas fa-user me-2"></i>Profile</a></li>
+            <li><a class="dropdown-item" href="/settings"><i class="fas fa-cog me-2"></i>Settings</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="/logout"><i class="fas fa-sign-out-alt me-2"></i>Logout</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Question Bank Page Content -->
+<section class="page-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <h1 class="page-title mb-4">Question Bank</h1>
+        <p class="text-secondary">Access thousands of practice questions across all topics.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<%- include('partials/footer') %>
