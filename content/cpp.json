@@ -1,0 +1,85 @@
+{
+  "title": "C++ Programming",
+  "description": "Master C++ programming and systems programming",
+  "introduction": "C++ is a powerful, high-performance programming language used for system software, game development, and applications requiring direct hardware access.",
+  "topics": [
+    {
+      "name": "Pointers and References",
+      "description": "Memory addresses, pointer arithmetic, and reference variables"
+    },
+    {
+      "name": "Object-Oriented Programming",
+      "description": "Classes, inheritance, polymorphism, and virtual functions"
+    },
+    {
+      "name": "Templates",
+      "description": "Function templates and class templates for generic programming"
+    },
+    {
+      "name": "STL (Standard Template Library)",
+      "description": "Containers, iterators, algorithms, and functors"
+    },
+    {
+      "name": "Memory Management",
+      "description": "Dynamic allocation, smart pointers, and RAII"
+    },
+    {
+      "name": "Exception Handling",
+      "description": "Try-catch blocks and exception safety"
+    },
+    {
+      "name": "C++11/14/17 Features",
+      "description": "Modern C++ features and best practices"
+    },
+    {
+      "name": "Multithreading",
+      "description": "Thread management and synchronization"
+    }
+  ],
+  "concepts": [
+    {
+      "name": "Smart Pointers",
+      "description": "Automatic memory management with unique_ptr, shared_ptr",
+      "example": "#include <memory>\n\nstd::unique_ptr<int> ptr = std::make_unique<int>(42);\nstd::shared_ptr<int> sptr = std::make_shared<int>(100);"
+    },
+    {
+      "name": "Move Semantics",
+      "description": "Efficient resource transfer using rvalue references",
+      "example": "class MyClass {\npublic:\n    MyClass(MyClass&& other) noexcept {\n        data = std::move(other.data);\n    }\nprivate:\n    std::vector<int> data;\n};"
+    },
+    {
+      "name": "Lambda Expressions",
+      "description": "Anonymous functions for concise code",
+      "example": "auto add = [](int a, int b) { return a + b; };\nstd::cout << add(5, 3) << std::endl;"
+    }
+  ],
+  "examples": [
+    {
+      "title": "Vector Operations",
+      "description": "Working with STL vector",
+      "code": "#include <vector>\n#include <iostream>\n\nint main() {\n    std::vector<int> vec = {1, 2, 3, 4, 5};\n    vec.push_back(6);\n    \n    for (int num : vec) {\n        std::cout << num << \" \";\n    }\n    return 0;\n}"
+    },
+    {
+      "title": "Class with Constructor",
+      "description": "Basic class implementation",
+      "code": "class Rectangle {\nprivate:\n    int width, height;\npublic:\n    Rectangle(int w, int h) : width(w), height(h) {}\n    \n    int area() {\n        return width * height;\n    }\n};"
+    }
+  ],
+  "resources": [
+    {
+      "title": "C++ Reference",
+      "url": "https://en.cppreference.com/",
+      "description": "Complete C++ language reference"
+    },
+    {
+      "title": "Learn C++",
+      "url": "https://www.learncpp.com/",
+      "description": "Free C++ tutorials"
+    },
+    {
+      "title": "C++ Core Guidelines",
+      "url": "https://isocpp.github.io/CppCoreGuidelines/",
+      "description": "Best practices by Bjarne Stroustrup"
+    }
+  ]
+}

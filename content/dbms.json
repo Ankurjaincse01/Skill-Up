@@ -1,0 +1,56 @@
+{
+  "title": "Database Management Systems (DBMS)",
+  "description": "Master database concepts and SQL",
+  "introduction": "DBMS is software for creating and managing databases. Understanding database concepts is crucial for backend development and data management.",
+  "topics": [
+    {
+      "name": "Relational Model",
+      "description": "Tables, rows, columns, and relationships"
+    },
+    {
+      "name": "SQL Queries",
+      "description": "SELECT, INSERT, UPDATE, DELETE operations"
+    },
+    {
+      "name": "Normalization",
+      "description": "1NF, 2NF, 3NF, BCNF"
+    },
+    {
+      "name": "Transactions",
+      "description": "ACID properties and transaction management"
+    },
+    {
+      "name": "Indexing",
+      "description": "B-trees, hash indexing, and performance optimization"
+    },
+    {
+      "name": "Joins",
+      "description": "INNER, LEFT, RIGHT, FULL OUTER joins"
+    }
+  ],
+  "concepts": [
+    {
+      "name": "Primary Key",
+      "description": "Unique identifier for table rows",
+      "example": "CREATE TABLE Students (\n    student_id INT PRIMARY KEY,\n    name VARCHAR(100),\n    email VARCHAR(100) UNIQUE\n);"
+    },
+    {
+      "name": "Foreign Key",
+      "description": "Reference to primary key in another table",
+      "example": "CREATE TABLE Enrollments (\n    enrollment_id INT PRIMARY KEY,\n    student_id INT,\n    course_id INT,\n    FOREIGN KEY (student_id) REFERENCES Students(student_id)\n);"
+    }
+  ],
+  "examples": [
+    {
+      "title": "JOIN Query",
+      "code": "SELECT s.name, c.course_name\nFROM Students s\nINNER JOIN Enrollments e ON s.student_id = e.student_id\nINNER JOIN Courses c ON e.course_id = c.course_id\nWHERE s.name LIKE 'A%';"
+    }
+  ],
+  "resources": [
+    {
+      "title": "SQL Tutorial",
+      "url": "https://www.w3schools.com/sql/",
+      "description": "Interactive SQL learning"
+    }
+  ]
+}

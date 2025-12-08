@@ -1,0 +1,51 @@
+{
+  "title": "Operating Systems",
+  "description": "Master OS concepts and system programming",
+  "introduction": "Operating systems manage computer hardware and software resources, providing services for computer programs.",
+  "topics": [
+    {
+      "name": "Process Management",
+      "description": "Process scheduling, creation, and termination"
+    },
+    {
+      "name": "Memory Management",
+      "description": "Paging, segmentation, and virtual memory"
+    },
+    {
+      "name": "File Systems",
+      "description": "File organization and access methods"
+    },
+    {
+      "name": "Deadlocks",
+      "description": "Detection, prevention, and avoidance"
+    },
+    {
+      "name": "Synchronization",
+      "description": "Semaphores, monitors, and critical sections"
+    },
+    {
+      "name": "CPU Scheduling",
+      "description": "FCFS, SJF, Round Robin, Priority scheduling"
+    }
+  ],
+  "concepts": [
+    {
+      "name": "Process vs Thread",
+      "description": "Key differences",
+      "example": "Process: Independent execution unit with own memory space\nThread: Lightweight process sharing memory space\n- Processes are isolated\n- Threads share resources\n- Context switching faster for threads"
+    }
+  ],
+  "examples": [
+    {
+      "title": "Producer-Consumer Problem",
+      "code": "import threading\nimport queue\n\nbuffer = queue.Queue(maxsize=10)\n\ndef producer():\n    for i in range(20):\n        buffer.put(i)\n        print(f'Produced {i}')\n\ndef consumer():\n    while True:\n        item = buffer.get()\n        print(f'Consumed {item}')\n        buffer.task_done()"
+    }
+  ],
+  "resources": [
+    {
+      "title": "OS Concepts",
+      "url": "https://www.geeksforgeeks.org/operating-systems/",
+      "description": "Comprehensive OS tutorials"
+    }
+  ]
+}

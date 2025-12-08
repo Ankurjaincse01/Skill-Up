@@ -1,0 +1,69 @@
+{
+  "title": "Web Development",
+  "description": "Master modern web development technologies",
+  "introduction": "Web development encompasses frontend, backend, and full-stack development. Learn to build modern, responsive, and scalable web applications.",
+  "topics": [
+    {
+      "name": "HTML5",
+      "description": "Semantic markup and modern HTML features"
+    },
+    {
+      "name": "CSS3",
+      "description": "Styling, flexbox, grid, animations"
+    },
+    {
+      "name": "JavaScript Frameworks",
+      "description": "React, Vue, Angular"
+    },
+    {
+      "name": "Backend Development",
+      "description": "Node.js, Express, Django, Flask"
+    },
+    {
+      "name": "REST APIs",
+      "description": "RESTful API design and implementation"
+    },
+    {
+      "name": "Databases",
+      "description": "SQL and NoSQL databases"
+    },
+    {
+      "name": "Authentication",
+      "description": "JWT, OAuth, session management"
+    },
+    {
+      "name": "Deployment",
+      "description": "CI/CD, Docker, cloud platforms"
+    }
+  ],
+  "concepts": [
+    {
+      "name": "RESTful API Design",
+      "description": "Best practices for API endpoints",
+      "example": "GET /api/users - List all users\nGET /api/users/:id - Get specific user\nPOST /api/users - Create new user\nPUT /api/users/:id - Update user\nDELETE /api/users/:id - Delete user"
+    },
+    {
+      "name": "Responsive Design",
+      "description": "Mobile-first CSS approach",
+      "example": "@media (max-width: 768px) {\n  .container {\n    flex-direction: column;\n    padding: 10px;\n  }\n}\n\n@media (min-width: 1024px) {\n  .container {\n    max-width: 1200px;\n    margin: 0 auto;\n  }\n}"
+    }
+  ],
+  "examples": [
+    {
+      "title": "Express.js Server",
+      "code": "const express = require('express');\nconst app = express();\n\napp.use(express.json());\n\napp.get('/api/users', (req, res) => {\n  res.json({ users: [] });\n});\n\napp.post('/api/users', (req, res) => {\n  const user = req.body;\n  res.status(201).json(user);\n});\n\napp.listen(3000, () => {\n  console.log('Server running on port 3000');\n});"
+    }
+  ],
+  "resources": [
+    {
+      "title": "MDN Web Docs",
+      "url": "https://developer.mozilla.org/",
+      "description": "Complete web development documentation"
+    },
+    {
+      "title": "freeCodeCamp",
+      "url": "https://www.freecodecamp.org/",
+      "description": "Free coding curriculum"
+    }
+  ]
+}

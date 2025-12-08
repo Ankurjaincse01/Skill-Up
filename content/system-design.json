@@ -1,0 +1,69 @@
+{
+  "title": "System Design",
+  "description": "Master scalable system architecture and design patterns",
+  "introduction": "System design focuses on building scalable, reliable, and maintainable distributed systems. Essential for senior engineer roles and technical interviews.",
+  "topics": [
+    {
+      "name": "Scalability",
+      "description": "Horizontal vs vertical scaling"
+    },
+    {
+      "name": "Load Balancing",
+      "description": "Distributing traffic across servers"
+    },
+    {
+      "name": "Caching",
+      "description": "Redis, Memcached, CDN"
+    },
+    {
+      "name": "Database Sharding",
+      "description": "Partitioning data across databases"
+    },
+    {
+      "name": "Microservices",
+      "description": "Distributed service architecture"
+    },
+    {
+      "name": "Message Queues",
+      "description": "RabbitMQ, Kafka, async communication"
+    },
+    {
+      "name": "CAP Theorem",
+      "description": "Consistency, Availability, Partition tolerance"
+    },
+    {
+      "name": "API Gateway",
+      "description": "Single entry point for microservices"
+    }
+  ],
+  "concepts": [
+    {
+      "name": "Load Balancer",
+      "description": "Distribute requests across servers",
+      "example": "Algorithm Options:\n- Round Robin: Sequential distribution\n- Least Connections: Server with fewest active connections\n- IP Hash: Based on client IP\n- Weighted Round Robin: Based on server capacity"
+    },
+    {
+      "name": "Caching Strategy",
+      "description": "Improve performance with cache",
+      "example": "Cache-Aside Pattern:\n1. Check cache for data\n2. If miss, query database\n3. Store result in cache\n4. Return data\n\nTTL (Time To Live): Set expiration\nCache Invalidation: Remove stale data"
+    }
+  ],
+  "examples": [
+    {
+      "title": "URL Shortener Design",
+      "code": "Components:\n1. API Server\n   - POST /shorten - Create short URL\n   - GET /:shortCode - Redirect to original\n\n2. Database (NoSQL)\n   - Store: shortCode -> originalURL\n   - Index on shortCode\n\n3. Cache (Redis)\n   - Hot URLs for fast lookup\n\n4. ID Generation\n   - Base62 encoding\n   - Counter or hash-based"
+    }
+  ],
+  "resources": [
+    {
+      "title": "System Design Primer",
+      "url": "https://github.com/donnemartin/system-design-primer",
+      "description": "Comprehensive system design guide"
+    },
+    {
+      "title": "Designing Data-Intensive Applications",
+      "url": "https://dataintensive.net/",
+      "description": "Martin Kleppmann's book"
+    }
+  ]
+}

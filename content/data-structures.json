@@ -1,0 +1,93 @@
+{
+  "title": "Data Structures",
+  "description": "Master essential data structures for efficient algorithms",
+  "introduction": "Data structures are fundamental components for organizing and storing data efficiently. Understanding them is crucial for solving complex problems and optimizing code performance.",
+  "topics": [
+    {
+      "name": "Arrays",
+      "description": "Contiguous memory storage with index-based access"
+    },
+    {
+      "name": "Linked Lists",
+      "description": "Sequential data structure with dynamic memory allocation"
+    },
+    {
+      "name": "Stacks",
+      "description": "LIFO (Last In First Out) data structure"
+    },
+    {
+      "name": "Queues",
+      "description": "FIFO (First In First Out) data structure"
+    },
+    {
+      "name": "Trees",
+      "description": "Hierarchical data structure with nodes and edges"
+    },
+    {
+      "name": "Binary Search Trees",
+      "description": "Ordered binary tree for efficient searching"
+    },
+    {
+      "name": "Heaps",
+      "description": "Complete binary tree satisfying heap property"
+    },
+    {
+      "name": "Hash Tables",
+      "description": "Key-value pairs with O(1) average access time"
+    },
+    {
+      "name": "Graphs",
+      "description": "Vertices connected by edges for complex relationships"
+    },
+    {
+      "name": "Tries",
+      "description": "Tree-like structure for efficient string operations"
+    }
+  ],
+  "concepts": [
+    {
+      "name": "Time Complexity",
+      "description": "Measure of algorithm efficiency",
+      "example": "O(1) - Constant time\nO(log n) - Logarithmic time\nO(n) - Linear time\nO(n log n) - Linearithmic time\nO(n²) - Quadratic time"
+    },
+    {
+      "name": "Stack Operations",
+      "description": "Push, pop, peek operations",
+      "example": "class Stack:\n    def __init__(self):\n        self.items = []\n    \n    def push(self, item):\n        self.items.append(item)\n    \n    def pop(self):\n        return self.items.pop()\n    \n    def peek(self):\n        return self.items[-1]"
+    },
+    {
+      "name": "Binary Search Tree Insert",
+      "description": "Inserting nodes in BST",
+      "example": "class TreeNode:\n    def __init__(self, val):\n        self.val = val\n        self.left = None\n        self.right = None\n\ndef insert(root, val):\n    if not root:\n        return TreeNode(val)\n    if val < root.val:\n        root.left = insert(root.left, val)\n    else:\n        root.right = insert(root.right, val)\n    return root"
+    }
+  ],
+  "examples": [
+    {
+      "title": "Linked List Implementation",
+      "description": "Basic singly linked list",
+      "code": "class Node:\n    def __init__(self, data):\n        self.data = data\n        self.next = None\n\nclass LinkedList:\n    def __init__(self):\n        self.head = None\n    \n    def append(self, data):\n        new_node = Node(data)\n        if not self.head:\n            self.head = new_node\n            return\n        current = self.head\n        while current.next:\n            current = current.next\n        current.next = new_node"
+    },
+    {
+      "title": "Hash Map Implementation",
+      "description": "Simple hash table",
+      "code": "class HashMap:\n    def __init__(self):\n        self.size = 100\n        self.map = [None] * self.size\n    \n    def _hash(self, key):\n        return hash(key) % self.size\n    \n    def put(self, key, value):\n        index = self._hash(key)\n        self.map[index] = (key, value)\n    \n    def get(self, key):\n        index = self._hash(key)\n        return self.map[index][1] if self.map[index] else None"
+    }
+  ],
+  "resources": [
+    {
+      "title": "VisuAlgo",
+      "url": "https://visualgo.net/",
+      "description": "Visualizing data structures and algorithms"
+    },
+    {
+      "title": "GeeksforGeeks DS",
+      "url": "https://www.geeksforgeeks.org/data-structures/",
+      "description": "Comprehensive data structures tutorials"
+    },
+    {
+      "title": "Data Structure Visualizations",
+      "url": "https://www.cs.usfca.edu/~galles/visualization/",
+      "description": "Interactive visualizations"
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "title": "Object-Oriented Programming",
+  "description": "Master OOP concepts and design principles",
+  "introduction": "Object-Oriented Programming is a programming paradigm based on the concept of objects containing data and code. It promotes code reusability, modularity, and maintainability.",
+  "topics": [
+    {
+      "name": "Classes and Objects",
+      "description": "Blueprint and instances of objects"
+    },
+    {
+      "name": "Encapsulation",
+      "description": "Bundling data and methods, data hiding"
+    },
+    {
+      "name": "Inheritance",
+      "description": "Creating new classes from existing ones"
+    },
+    {
+      "name": "Polymorphism",
+      "description": "Multiple forms of methods and objects"
+    },
+    {
+      "name": "Abstraction",
+      "description": "Hiding implementation details"
+    },
+    {
+      "name": "SOLID Principles",
+      "description": "Design principles for maintainable code"
+    }
+  ],
+  "concepts": [
+    {
+      "name": "Encapsulation",
+      "description": "Data hiding and access control",
+      "example": "class BankAccount:\n    def __init__(self, balance):\n        self.__balance = balance  # Private\n    \n    def deposit(self, amount):\n        if amount > 0:\n            self.__balance += amount\n    \n    def get_balance(self):\n        return self.__balance"
+    },
+    {
+      "name": "Inheritance",
+      "description": "Parent-child class relationship",
+      "example": "class Animal:\n    def speak(self):\n        pass\n\nclass Dog(Animal):\n    def speak(self):\n        return \"Woof!\"\n\nclass Cat(Animal):\n    def speak(self):\n        return \"Meow!\""
+    }
+  ],
+  "examples": [
+    {
+      "title": "Polymorphism Example",
+      "code": "class Shape:\n    def area(self):\n        pass\n\nclass Circle(Shape):\n    def __init__(self, radius):\n        self.radius = radius\n    \n    def area(self):\n        return 3.14 * self.radius ** 2\n\nclass Rectangle(Shape):\n    def __init__(self, width, height):\n        self.width = width\n        self.height = height\n    \n    def area(self):\n        return self.width * self.height"
+    }
+  ],
+  "resources": [
+    {
+      "title": "OOP Concepts",
+      "url": "https://www.geeksforgeeks.org/object-oriented-programming-oops-concept-in-java/",
+      "description": "Comprehensive OOP guide"
+    }
+  ]
+}

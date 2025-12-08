@@ -1,0 +1,56 @@
+{
+  "title": "C Programming",
+  "description": "Master C programming and system-level development",
+  "introduction": "C is a powerful general-purpose programming language that provides low-level access to memory and is widely used for system programming, embedded systems, and performance-critical applications.",
+  "topics": [
+    {
+      "name": "Pointers",
+      "description": "Memory addresses and pointer operations"
+    },
+    {
+      "name": "Memory Management",
+      "description": "Dynamic memory allocation with malloc, calloc, free"
+    },
+    {
+      "name": "Structures and Unions",
+      "description": "User-defined data types"
+    },
+    {
+      "name": "File Operations",
+      "description": "Reading and writing files"
+    },
+    {
+      "name": "Preprocessor Directives",
+      "description": "Macros, include, and conditional compilation"
+    },
+    {
+      "name": "Arrays and Strings",
+      "description": "Array manipulation and string handling"
+    }
+  ],
+  "concepts": [
+    {
+      "name": "Pointer Basics",
+      "description": "Declaring and using pointers",
+      "example": "int x = 10;\nint *ptr = &x;\nprintf(\"Value: %d\\n\", *ptr);\nprintf(\"Address: %p\\n\", ptr);"
+    },
+    {
+      "name": "Dynamic Memory",
+      "description": "Allocating memory at runtime",
+      "example": "int *arr = (int*)malloc(5 * sizeof(int));\nif (arr != NULL) {\n    for (int i = 0; i < 5; i++) {\n        arr[i] = i * 10;\n    }\n    free(arr);\n}"
+    }
+  ],
+  "examples": [
+    {
+      "title": "Structure Example",
+      "code": "struct Student {\n    char name[50];\n    int rollNo;\n    float marks;\n};\n\nint main() {\n    struct Student s1;\n    strcpy(s1.name, \"Alice\");\n    s1.rollNo = 101;\n    s1.marks = 95.5;\n    return 0;\n}"
+    }
+  ],
+  "resources": [
+    {
+      "title": "C Programming",
+      "url": "https://www.learn-c.org/",
+      "description": "Interactive C tutorial"
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "title": "Interview Preparation",
+  "description": "Master technical interview skills and strategies",
+  "introduction": "Ace your technical interviews with comprehensive preparation covering coding, system design, behavioral questions, and best practices.",
+  "topics": [
+    {
+      "name": "Coding Interview",
+      "description": "Problem-solving strategies and patterns"
+    },
+    {
+      "name": "Behavioral Questions",
+      "description": "STAR method and common questions"
+    },
+    {
+      "name": "System Design Interview",
+      "description": "Approach and communication"
+    },
+    {
+      "name": "Time Management",
+      "description": "Solving problems efficiently"
+    },
+    {
+      "name": "Communication Skills",
+      "description": "Explaining thought process clearly"
+    },
+    {
+      "name": "Mock Interviews",
+      "description": "Practice with peers and platforms"
+    }
+  ],
+  "concepts": [
+    {
+      "name": "STAR Method",
+      "description": "Behavioral interview framework",
+      "example": "Situation: Set the context\nTask: Describe your responsibility\nAction: Explain what you did\nResult: Share the outcome\n\nExample:\n'Tell me about a challenging project'\nS: Working on e-commerce checkout\nT: Reduce cart abandonment by 20%\nA: Implemented one-click checkout\nR: Achieved 25% reduction in 3 months"
+    },
+    {
+      "name": "Problem-Solving Framework",
+      "description": "Structured approach to coding problems",
+      "example": "1. Understand & Clarify\n   - Ask questions\n   - Identify constraints\n   - Examples and edge cases\n\n2. Plan\n   - Brute force approach\n   - Optimize\n   - Choose data structures\n\n3. Implement\n   - Write clean code\n   - Test as you go\n\n4. Test & Debug\n   - Run test cases\n   - Handle edge cases"
+    }
+  ],
+  "examples": [
+    {
+      "title": "Common Behavioral Questions",
+      "code": "1. Tell me about yourself\n2. Why do you want to work here?\n3. Describe a challenging project\n4. How do you handle conflicts?\n5. Tell me about a failure\n6. Where do you see yourself in 5 years?\n7. Why are you leaving your current job?\n8. Describe your ideal work environment\n9. How do you prioritize tasks?\n10. Tell me about a time you showed leadership"
+    },
+    {
+      "title": "Coding Interview Tips",
+      "code": "✓ Think aloud - explain your approach\n✓ Ask clarifying questions\n✓ Start with brute force, then optimize\n✓ Use meaningful variable names\n✓ Test with examples\n✓ Consider edge cases\n✓ Analyze time/space complexity\n✓ Stay calm and organized\n✓ Practice on LeetCode/HackerRank\n✓ Review data structures daily"
+    }
+  ],
+  "resources": [
+    {
+      "title": "Cracking the Coding Interview",
+      "url": "https://www.crackingthecodinginterview.com/",
+      "description": "Gayle Laakmann McDowell's book"
+    },
+    {
+      "title": "Pramp",
+      "url": "https://www.pramp.com/",
+      "description": "Free mock interviews"
+    },
+    {
+      "title": "Blind 75 LeetCode",
+      "url": "https://leetcode.com/discuss/general-discussion/460599/blind-75-leetcode-questions",
+      "description": "Essential coding problems"
+    }
+  ]
+}

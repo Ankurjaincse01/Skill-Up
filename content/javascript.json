@@ -1,0 +1,85 @@
+{
+  "title": "JavaScript Programming",
+  "description": "Master modern JavaScript and web development",
+  "introduction": "JavaScript is the programming language of the web, enabling interactive websites, server-side applications with Node.js, and mobile apps.",
+  "topics": [
+    {
+      "name": "ES6+ Features",
+      "description": "Arrow functions, destructuring, spread operator, template literals"
+    },
+    {
+      "name": "Async Programming",
+      "description": "Promises, async/await, and callback patterns"
+    },
+    {
+      "name": "DOM Manipulation",
+      "description": "Selecting and modifying HTML elements"
+    },
+    {
+      "name": "Event Handling",
+      "description": "User interactions and event listeners"
+    },
+    {
+      "name": "Closures and Scope",
+      "description": "Function scope, lexical scope, and closures"
+    },
+    {
+      "name": "Array Methods",
+      "description": "Map, filter, reduce, and other array operations"
+    },
+    {
+      "name": "Object-Oriented JS",
+      "description": "Prototypes, classes, and inheritance"
+    },
+    {
+      "name": "Modules",
+      "description": "Import/export and module systems"
+    }
+  ],
+  "concepts": [
+    {
+      "name": "Arrow Functions",
+      "description": "Concise function syntax with lexical this binding",
+      "example": "const numbers = [1, 2, 3, 4, 5];\nconst doubled = numbers.map(n => n * 2);\nconsole.log(doubled); // [2, 4, 6, 8, 10]"
+    },
+    {
+      "name": "Destructuring",
+      "description": "Extract values from arrays or objects",
+      "example": "const person = { name: 'Alice', age: 30 };\nconst { name, age } = person;\n\nconst arr = [1, 2, 3];\nconst [first, second] = arr;"
+    },
+    {
+      "name": "Async/Await",
+      "description": "Modern asynchronous code handling",
+      "example": "async function fetchData() {\n    try {\n        const response = await fetch('https://api.example.com');\n        const data = await response.json();\n        return data;\n    } catch (error) {\n        console.error(error);\n    }\n}"
+    }
+  ],
+  "examples": [
+    {
+      "title": "Array Methods Chaining",
+      "description": "Combining multiple array operations",
+      "code": "const numbers = [1, 2, 3, 4, 5, 6];\nconst result = numbers\n    .filter(n => n % 2 === 0)\n    .map(n => n * 2)\n    .reduce((sum, n) => sum + n, 0);\nconsole.log(result); // 24"
+    },
+    {
+      "title": "Class with Methods",
+      "description": "ES6 class syntax",
+      "code": "class Person {\n    constructor(name, age) {\n        this.name = name;\n        this.age = age;\n    }\n    \n    greet() {\n        return `Hello, I'm ${this.name}`;\n    }\n}\n\nconst person = new Person('Alice', 30);\nconsole.log(person.greet());"
+    }
+  ],
+  "resources": [
+    {
+      "title": "MDN Web Docs",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+      "description": "Comprehensive JavaScript documentation"
+    },
+    {
+      "title": "JavaScript.info",
+      "url": "https://javascript.info/",
+      "description": "Modern JavaScript tutorial"
+    },
+    {
+      "title": "ES6 Features",
+      "url": "http://es6-features.org/",
+      "description": "Overview of ECMAScript 6 features"
+    }
+  ]
+}

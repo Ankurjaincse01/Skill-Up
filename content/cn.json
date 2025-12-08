@@ -1,0 +1,56 @@
+{
+  "title": "Computer Networks",
+  "description": "Master networking concepts and protocols",
+  "introduction": "Computer networks enable communication between devices. Understanding networking is essential for web development and system design.",
+  "topics": [
+    {
+      "name": "OSI Model",
+      "description": "7-layer network architecture model"
+    },
+    {
+      "name": "TCP/IP Protocol",
+      "description": "Transmission Control Protocol and Internet Protocol"
+    },
+    {
+      "name": "HTTP/HTTPS",
+      "description": "Web protocols and secure communication"
+    },
+    {
+      "name": "DNS",
+      "description": "Domain Name System and resolution"
+    },
+    {
+      "name": "Network Security",
+      "description": "Firewalls, VPN, encryption"
+    },
+    {
+      "name": "Routing Algorithms",
+      "description": "Distance vector, link state routing"
+    }
+  ],
+  "concepts": [
+    {
+      "name": "TCP vs UDP",
+      "description": "Connection-oriented vs connectionless",
+      "example": "TCP:\n- Reliable, ordered delivery\n- Connection-oriented\n- Used for: HTTP, FTP, Email\n\nUDP:\n- Fast, no guarantees\n- Connectionless\n- Used for: Video streaming, DNS, Gaming"
+    },
+    {
+      "name": "HTTP Methods",
+      "description": "RESTful API operations",
+      "example": "GET - Retrieve data\nPOST - Create new resource\nPUT - Update entire resource\nPATCH - Partial update\nDELETE - Remove resource"
+    }
+  ],
+  "examples": [
+    {
+      "title": "Socket Programming",
+      "code": "import socket\n\n# Server\nserver = socket.socket(socket.AF_INET, socket.SOCK_STREAM)\nserver.bind(('localhost', 8080))\nserver.listen(1)\nconn, addr = server.accept()\ndata = conn.recv(1024)\nconn.send(b'Hello Client')\nconn.close()"
+    }
+  ],
+  "resources": [
+    {
+      "title": "Computer Networks",
+      "url": "https://www.geeksforgeeks.org/computer-network-tutorials/",
+      "description": "Network concepts and protocols"
+    }
+  ]
+}

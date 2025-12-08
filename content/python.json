@@ -1,0 +1,85 @@
+{
+  "title": "Python Programming",
+  "description": "Master Python programming from basics to advanced concepts",
+  "introduction": "Python is a high-level, interpreted programming language known for its simplicity and versatility. It's widely used in web development, data science, artificial intelligence, and automation.",
+  "topics": [
+    {
+      "name": "Variables and Data Types",
+      "description": "Understanding Python's dynamic typing system and basic data types"
+    },
+    {
+      "name": "Control Flow",
+      "description": "If statements, loops, and conditional logic"
+    },
+    {
+      "name": "Functions",
+      "description": "Defining and using functions, lambda expressions, and decorators"
+    },
+    {
+      "name": "Object-Oriented Programming",
+      "description": "Classes, inheritance, polymorphism, and encapsulation"
+    },
+    {
+      "name": "File Handling",
+      "description": "Reading and writing files, working with different file formats"
+    },
+    {
+      "name": "Exception Handling",
+      "description": "Try-except blocks, raising exceptions, and custom exceptions"
+    },
+    {
+      "name": "Modules and Packages",
+      "description": "Importing modules, creating packages, and virtual environments"
+    },
+    {
+      "name": "Data Structures",
+      "description": "Lists, tuples, dictionaries, sets, and their operations"
+    }
+  ],
+  "concepts": [
+    {
+      "name": "List Comprehension",
+      "description": "A concise way to create lists based on existing lists",
+      "example": "squares = [x**2 for x in range(10)]\nprint(squares)  # [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]"
+    },
+    {
+      "name": "Generators",
+      "description": "Functions that return an iterator using yield keyword",
+      "example": "def fibonacci(n):\n    a, b = 0, 1\n    for _ in range(n):\n        yield a\n        a, b = b, a + b"
+    },
+    {
+      "name": "Decorators",
+      "description": "Functions that modify the behavior of other functions",
+      "example": "def timing_decorator(func):\n    def wrapper(*args, **kwargs):\n        import time\n        start = time.time()\n        result = func(*args, **kwargs)\n        print(f'Time: {time.time() - start}')\n        return result\n    return wrapper"
+    }
+  ],
+  "examples": [
+    {
+      "title": "Basic Class Example",
+      "description": "Creating a simple class with methods",
+      "code": "class Person:\n    def __init__(self, name, age):\n        self.name = name\n        self.age = age\n    \n    def greet(self):\n        return f'Hello, my name is {self.name}'\n\nperson = Person('Alice', 30)\nprint(person.greet())"
+    },
+    {
+      "title": "File Reading",
+      "description": "Reading a file line by line",
+      "code": "with open('data.txt', 'r') as file:\n    for line in file:\n        print(line.strip())"
+    }
+  ],
+  "resources": [
+    {
+      "title": "Python Official Documentation",
+      "url": "https://docs.python.org/3/",
+      "description": "Official Python documentation and tutorials"
+    },
+    {
+      "title": "Real Python",
+      "url": "https://realpython.com/",
+      "description": "Comprehensive Python tutorials and articles"
+    },
+    {
+      "title": "Python Package Index (PyPI)",
+      "url": "https://pypi.org/",
+      "description": "Repository of Python packages and libraries"
+    }
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "title": "Java Programming",
+  "description": "Master Java programming and object-oriented concepts",
+  "introduction": "Java is a robust, platform-independent, object-oriented programming language widely used for enterprise applications, Android development, and web services.",
+  "topics": [
+    {
+      "name": "Java Basics",
+      "description": "Syntax, variables, data types, and operators"
+    },
+    {
+      "name": "Object-Oriented Programming",
+      "description": "Classes, objects, inheritance, polymorphism, and encapsulation"
+    },
+    {
+      "name": "Exception Handling",
+      "description": "Try-catch blocks, custom exceptions, and throw statements"
+    },
+    {
+      "name": "Collections Framework",
+      "description": "List, Set, Map, Queue and their implementations"
+    },
+    {
+      "name": "Multithreading",
+      "description": "Thread creation, synchronization, and concurrent programming"
+    },
+    {
+      "name": "Java 8+ Features",
+      "description": "Lambda expressions, streams, and functional interfaces"
+    },
+    {
+      "name": "File I/O",
+      "description": "Reading and writing files using Java I/O and NIO"
+    },
+    {
+      "name": "JDBC",
+      "description": "Database connectivity and operations"
+    }
+  ],
+  "concepts": [
+    {
+      "name": "Interface vs Abstract Class",
+      "description": "Key differences and when to use each",
+      "example": "interface Animal {\n    void makeSound();\n}\n\nabstract class Mammal {\n    abstract void eat();\n    void breathe() {\n        System.out.println(\"Breathing...\");\n    }\n}"
+    },
+    {
+      "name": "Lambda Expressions",
+      "description": "Concise way to represent functional interfaces",
+      "example": "List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5);\nnumbers.forEach(n -> System.out.println(n * 2));"
+    },
+    {
+      "name": "Stream API",
+      "description": "Functional-style operations on collections",
+      "example": "List<String> names = Arrays.asList(\"Alice\", \"Bob\", \"Charlie\");\nnames.stream()\n     .filter(name -> name.startsWith(\"A\"))\n     .forEach(System.out::println);"
+    }
+  ],
+  "examples": [
+    {
+      "title": "Singleton Pattern",
+      "description": "Ensure a class has only one instance",
+      "code": "public class Singleton {\n    private static Singleton instance;\n    \n    private Singleton() {}\n    \n    public static Singleton getInstance() {\n        if (instance == null) {\n            instance = new Singleton();\n        }\n        return instance;\n    }\n}"
+    },
+    {
+      "title": "ArrayList Operations",
+      "description": "Working with ArrayList collection",
+      "code": "ArrayList<String> list = new ArrayList<>();\nlist.add(\"Apple\");\nlist.add(\"Banana\");\nlist.remove(0);\nfor (String item : list) {\n    System.out.println(item);\n}"
+    }
+  ],
+  "resources": [
+    {
+      "title": "Oracle Java Documentation",
+      "url": "https://docs.oracle.com/en/java/",
+      "description": "Official Java documentation"
+    },
+    {
+      "title": "Java Tutorials by Oracle",
+      "url": "https://docs.oracle.com/javase/tutorial/",
+      "description": "Comprehensive Java tutorials"
+    },
+    {
+      "title": "Baeldung",
+      "url": "https://www.baeldung.com/",
+      "description": "Java and Spring tutorials"
+    }
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "title": "Algorithms",
+  "description": "Master algorithmic techniques and problem-solving strategies",
+  "introduction": "Algorithms are step-by-step procedures for solving problems. Understanding common algorithms and techniques is essential for technical interviews and efficient programming.",
+  "topics": [
+    {
+      "name": "Sorting Algorithms",
+      "description": "Bubble, merge, quick, heap sort and their complexities"
+    },
+    {
+      "name": "Searching Algorithms",
+      "description": "Binary search, linear search, and search optimizations"
+    },
+    {
+      "name": "Dynamic Programming",
+      "description": "Breaking problems into overlapping subproblems"
+    },
+    {
+      "name": "Greedy Algorithms",
+      "description": "Making locally optimal choices"
+    },
+    {
+      "name": "Divide and Conquer",
+      "description": "Breaking problems into smaller subproblems"
+    },
+    {
+      "name": "Backtracking",
+      "description": "Exploring all possible solutions recursively"
+    },
+    {
+      "name": "Graph Algorithms",
+      "description": "BFS, DFS, Dijkstra's, and shortest path algorithms"
+    },
+    {
+      "name": "String Algorithms",
+      "description": "Pattern matching, KMP, and string manipulation"
+    }
+  ],
+  "concepts": [
+    {
+      "name": "Binary Search",
+      "description": "Efficient searching in sorted arrays",
+      "example": "def binary_search(arr, target):\n    left, right = 0, len(arr) - 1\n    while left <= right:\n        mid = (left + right) // 2\n        if arr[mid] == target:\n            return mid\n        elif arr[mid] < target:\n            left = mid + 1\n        else:\n            right = mid - 1\n    return -1"
+    },
+    {
+      "name": "Merge Sort",
+      "description": "Divide and conquer sorting algorithm",
+      "example": "def merge_sort(arr):\n    if len(arr) <= 1:\n        return arr\n    mid = len(arr) // 2\n    left = merge_sort(arr[:mid])\n    right = merge_sort(arr[mid:])\n    return merge(left, right)\n\ndef merge(left, right):\n    result = []\n    i = j = 0\n    while i < len(left) and j < len(right):\n        if left[i] < right[j]:\n            result.append(left[i])\n            i += 1\n        else:\n            result.append(right[j])\n            j += 1\n    result.extend(left[i:])\n    result.extend(right[j:])\n    return result"
+    },
+    {
+      "name": "Dynamic Programming - Fibonacci",
+      "description": "Memoization technique",
+      "example": "def fib(n, memo={}):\n    if n in memo:\n        return memo[n]\n    if n <= 2:\n        return 1\n    memo[n] = fib(n-1, memo) + fib(n-2, memo)\n    return memo[n]"
+    }
+  ],
+  "examples": [
+    {
+      "title": "Quick Sort",
+      "description": "Efficient sorting algorithm",
+      "code": "def quick_sort(arr):\n    if len(arr) <= 1:\n        return arr\n    pivot = arr[len(arr) // 2]\n    left = [x for x in arr if x < pivot]\n    middle = [x for x in arr if x == pivot]\n    right = [x for x in arr if x > pivot]\n    return quick_sort(left) + middle + quick_sort(right)"
+    },
+    {
+      "title": "Breadth-First Search",
+      "description": "Graph traversal algorithm",
+      "code": "from collections import deque\n\ndef bfs(graph, start):\n    visited = set()\n    queue = deque([start])\n    visited.add(start)\n    \n    while queue:\n        vertex = queue.popleft()\n        print(vertex, end=' ')\n        \n        for neighbor in graph[vertex]:\n            if neighbor not in visited:\n                visited.add(neighbor)\n                queue.append(neighbor)"
+    }
+  ],
+  "resources": [
+    {
+      "title": "LeetCode",
+      "url": "https://leetcode.com/",
+      "description": "Practice algorithmic problems"
+    },
+    {
+      "title": "Algorithm Visualizer",
+      "url": "https://algorithm-visualizer.org/",
+      "description": "Visualize algorithms in action"
+    },
+    {
+      "title": "Introduction to Algorithms",
+      "url": "https://mitpress.mit.edu/books/introduction-algorithms",
+      "description": "CLRS - The definitive algorithms textbook"
+    }
+  ]
+}
