@@ -53,52 +53,6 @@
       overflow-x: auto;
       margin: 1rem 0;
     }
-    .ai-section {
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-      color: white;
-      padding: 2rem;
-      border-radius: 12px;
-      margin-bottom: 2rem;
-    }
-    .ai-button {
-      background: white;
-      color: #667eea;
-      border: none;
-      padding: 12px 30px;
-      border-radius: 25px;
-      font-weight: bold;
-      cursor: pointer;
-      transition: all 0.3s;
-    }
-    .ai-button:hover {
-      transform: scale(1.05);
-      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-    }
-    .ai-result {
-      background: white;
-      color: #333;
-      padding: 2rem;
-      border-radius: 8px;
-      margin-top: 1.5rem;
-      display: none;
-    }
-    .loading {
-      text-align: center;
-      padding: 2rem;
-    }
-    .spinner {
-      border: 4px solid #f3f3f3;
-      border-top: 4px solid #667eea;
-      border-radius: 50%;
-      width: 40px;
-      height: 40px;
-      animation: spin 1s linear infinite;
-      margin: 0 auto;
-    }
-    @keyframes spin {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
-    }
   </style>
 </head>
 <body>
@@ -117,44 +71,6 @@
     <div class="row">
       <div class="col-lg-12">
         
-        <!-- AI Question Generator Section -->
-        <div class="ai-section">
-          <h3>🤖 AI-Powered Question Generator</h3>
-          <p>Generate custom DSA problems tailored to this topic using AI!</p>
-          <div class="row mt-3">
-            <div class="col-md-4">
-              <select id="difficulty" class="form-select">
-                <option value="easy">Easy</option>
-                <option value="medium" selected>Medium</option>
-                <option value="hard">Hard</option>
-              </select>
-            </div>
-            <div class="col-md-4">
-              <select id="language" class="form-select">
-                <option value="">No Code Template</option>
-                <option value="Python">Python</option>
-                <option value="Java">Java</option>
-                <option value="C++">C++</option>
-                <option value="JavaScript">JavaScript</option>
-              </select>
-            </div>
-            <div class="col-md-4">
-              <button class="ai-button w-100" onclick="generateQuestion()">
-                ✨ Generate Question
-              </button>
-            </div>
-          </div>
-          
-          <!-- AI Result -->
-          <div id="aiResult" class="ai-result">
-            <div id="loadingSpinner" class="loading">
-              <div class="spinner"></div>
-              <p class="mt-2">Generating your question...</p>
-            </div>
-            <div id="questionContent" style="display: none;"></div>
-          </div>
-        </div>
-
         <!-- Introduction Section -->
         <% if (content.introduction) { %>
         <div class="content-section">
@@ -230,110 +146,11 @@
                   <pre><code><%= example.code %></code></pre>
                 </div>
               </div>
-  <%- include('partials/footer') %>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <script>
-    async function generateQuestion() {
-      const difficulty = document.getElementById('difficulty').value;
-      const language = document.getElementById('language').value;
-      const topic = '<%= topic %>';
-      
-      const resultDiv = document.getElementById('aiResult');
-      const loadingDiv = document.getElementById('loadingSpinner');
-      const contentDiv = document.getElementById('questionContent');
-      
-      // Show loading
-      resultDiv.style.display = 'block';
-      loadingDiv.style.display = 'block';
-      contentDiv.style.display = 'none';
-      
-      try {
-        const response = await fetch('/api/generate-dsa-question', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify({ topic, difficulty, language })
-        });
-        
-        const data = await response.json();
-        
-        if (data.success) {
-          const question = data.question;
-          
-          let html = `
-            <h4 style="color: #667eea;">${question.title}</h4>
-            <h5 class="mt-4">📝 Problem Description</h5>
-            <p>${question.description}</p>
-            
-            <h5 class="mt-3">📥 Input Format</h5>
-            <p>${question.inputFormat}</p>
-            
-            <h5 class="mt-3">📤 Output Format</h5>
-            <p>${question.outputFormat}</p>
-            
-            <h5 class="mt-3">⚠️ Constraints</h5>
-            <p>${question.constraints}</p>
-            
-            <h5 class="mt-3">💡 Examples</h5>
-          `;
-          
-          if (question.examples && Array.isArray(question.examples)) {
-            question.examples.forEach((ex, i) => {
-              html += `
-                <div class="mt-2">
-                  <strong>Example ${i + 1}:</strong><br>
-                  <code style="background: #f5f5f5; padding: 10px; display: block; border-radius: 5px;">
-                    Input: ${ex.input}<br>
-                    Output: ${ex.output}
-                    ${ex.explanation ? `<br>Explanation: ${ex.explanation}` : ''}
-                  </code>
-                </div>
-              `;
-            });
-          }
-          
-          if (question.hints && Array.isArray(question.hints)) {
-            html += `<h5 class="mt-3">💭 Hints</h5><ul>`;
-            question.hints.forEach(hint => {
-              html += `<li>${hint}</li>`;
-            });
-            html += `</ul>`;
-          }
-          
-          html += `
-            <h5 class="mt-3">⏱️ Complexity</h5>
-            <p><strong>Time:</strong> ${question.timeComplexity || 'Not specified'}</p>
-            <p><strong>Space:</strong> ${question.spaceComplexity || 'Not specified'}</p>
-          `;
-          
-          if (question.codeTemplate) {
-            html += `
-              <h5 class="mt-3">💻 Code Template</h5>
-              <pre style="background: #282c34; color: #abb2bf; padding: 15px; border-radius: 8px; overflow-x: auto;"><code>${question.codeTemplate}</code></pre>
-            `;
-          }
-          
-          contentDiv.innerHTML = html;
-          loadingDiv.style.display = 'none';
-          contentDiv.style.display = 'block';
-        } else {
-          throw new Error(data.message);
-        }
-      } catch (error) {
-        contentDiv.innerHTML = `
-          <div class="alert alert-danger">
-            <strong>Error:</strong> ${error.message || 'Failed to generate question. Please try again.'}
+              <% }); %>
+            </div>
           </div>
-        `;
-        loadingDiv.style.display = 'none';
-        contentDiv.style.display = 'block';
-      }
-    }
-  </script>
-</body>
-</html> <% } %>
+        </div>
+        <% } %>
 
         <!-- Resources -->
         <% if (content.resources && content.resources.length > 0) { %>
