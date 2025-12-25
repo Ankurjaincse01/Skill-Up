@@ -1,0 +1,408 @@
+<%- include('partials/header') %>
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+  <div class="container-fluid px-4">
+    <a class="navbar-brand d-flex align-items-center" href="/">
+      <div class="logo-icon">
+        <i class="fas fa-code"></i>
+      </div>
+      <span class="ms-2 fw-bold">Skill Up</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle active" href="#" id="prepareDropdown" role="button" data-bs-toggle="dropdown">
+            Prepare
+          </a>
+          <ul class="dropdown-menu">
+            <li><h6 class="dropdown-header">Programming Languages</h6></li>
+            <li><a class="dropdown-item" href="/prepare/python">Python</a></li>
+            <li><a class="dropdown-item" href="/prepare/java">Java</a></li>
+            <li><a class="dropdown-item" href="/prepare/cpp">C++</a></li>
+            <li><a class="dropdown-item" href="/prepare/javascript">JavaScript</a></li>
+            <li><a class="dropdown-item" href="/prepare/c">C</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><h6 class="dropdown-header">Core CS Concepts</h6></li>
+            <li><a class="dropdown-item" href="/prepare/data-structures">Data Structures</a></li>
+            <li><a class="dropdown-item" href="/prepare/algorithms">Algorithms</a></li>
+            <li><a class="dropdown-item" href="/prepare/oops">OOP Concepts</a></li>
+            <li><a class="dropdown-item" href="/prepare/dbms">DBMS</a></li>
+            <li><a class="dropdown-item" href="/prepare/os">Operating Systems</a></li>
+            <li><a class="dropdown-item" href="/prepare/cn">Computer Networks</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><h6 class="dropdown-header">Development</h6></li>
+            <li><a class="dropdown-item" href="/prepare/web-dev">Web Development</a></li>
+            <li><a class="dropdown-item" href="/prepare/system-design">System Design</a></li>
+            <li><a class="dropdown-item" href="/prepare/interview-prep">Interview Prep</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="mockTestDropdown" role="button" data-bs-toggle="dropdown">
+            Mock Test
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="/mock-test/coding">Coding Tests</a></li>
+            <li><a class="dropdown-item" href="/mock-test/technical">Technical Tests</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/prep-ai">Prep AI</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-bs-toggle="dropdown">
+            <img src="https://ui-avatars.com/api/?name=<%= user?.name || 'User' %>&background=5b6ef7&color=fff" 
+                 alt="User" class="rounded-circle" width="32" height="32">
+            <span class="ms-2"><%= user?.name || 'User' %></span>
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li><a class="dropdown-item" href="/dashboard">Dashboard</a></li>
+            <li><a class="dropdown-item" href="/profile">Profile</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="/logout">Logout</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Interview Prep Content -->
+<div class="interview-prep-container">
+  <div class="container-fluid px-5 py-4">
+    <!-- Header Section -->
+    <div class="prep-header mb-4">
+      <div class="mb-3">
+        <h1 class="prep-title mb-0">Interview Prep AI</h1>
+      </div>
+      
+      <h2 class="role-title mb-2"><%= role || 'DevOps Engineer' %></h2>
+      <p class="role-skills mb-3"><%= skills || 'CI/CD, Docker, Kubernetes, and AWS' %></p>
+      
+      <div class="d-flex gap-2 mb-3">
+        <span class="badge-pill"><%= questions?.length || '10' %> Q&A</span>
+      </div>
+    </div>
+
+    <!-- Questions Section -->
+    <div class="questions-section">
+      <h3 class="section-heading mb-4">Interview Q & A</h3>
+      
+      <div class="accordion" id="questionsAccordion">
+        <% 
+        const defaultQuestions = [
+          {
+            id: 1,
+            question: "Explain the core principles of CI/CD and why they're important.",
+            answer: "CI/CD stands for Continuous Integration and Continuous Deployment. The core principles include: 1) Automated testing and integration, 2) Frequent code commits, 3) Automated builds, 4) Fast feedback loops, 5) Automated deployment. These are important because they reduce manual errors, speed up development cycles, improve code quality, and enable faster delivery of features to production."
+          },
+          {
+            id: 2,
+            question: "Describe the benefits of using Docker for containerization.",
+            answer: "Docker provides several benefits: 1) Consistency across environments (dev, staging, production), 2) Isolation of applications, 3) Lightweight and fast compared to VMs, 4) Easy scaling and orchestration, 5) Simplified dependency management, 6) Improved resource utilization, 7) Version control for infrastructure."
+          },
+          {
+            id: 3,
+            question: "Explain the difference between Continuous Delivery and Continuous Deployment.",
+            answer: "Continuous Delivery means code changes are automatically built, tested, and prepared for release to production, but require manual approval for deployment. Continuous Deployment goes one step further - every change that passes automated tests is automatically deployed to production without manual intervention. CD (Delivery) = manual trigger to production, CD (Deployment) = automatic release to production."
+          },
+          {
+            id: 4,
+            question: "What is Kubernetes, and what problems does it solve?",
+            answer: "Kubernetes is an open-source container orchestration platform. It solves problems like: 1) Automated deployment and scaling of containers, 2) Load balancing and service discovery, 3) Self-healing (automatic restart of failed containers), 4) Rolling updates and rollbacks, 5) Resource management and optimization, 6) Configuration and secret management, 7) Multi-cloud and hybrid cloud deployments."
+          },
+          {
+            id: 5,
+            question: "Describe the components of a Kubernetes deployment.",
+            answer: "A Kubernetes deployment consists of: 1) Pods - smallest deployable units containing one or more containers, 2) ReplicaSets - ensure desired number of pod replicas are running, 3) Services - provide stable networking and load balancing, 4) ConfigMaps - store configuration data, 5) Secrets - store sensitive information, 6) Ingress - manage external access to services, 7) Persistent Volumes - manage storage."
+          },
+          {
+            id: 6,
+            question: "How would you approach deploying an application to Kubernetes?",
+            answer: "Deployment approach: 1) Containerize the application using Docker, 2) Create Kubernetes manifests (Deployment, Service, ConfigMap), 3) Set up namespace for organization, 4) Configure resource limits and requests, 5) Implement health checks (liveness and readiness probes), 6) Set up horizontal pod autoscaling if needed, 7) Configure monitoring and logging, 8) Use rolling updates for zero-downtime deployments, 9) Test in staging environment first."
+          },
+          {
+            id: 7,
+            question: "Explain the role of Services in Kubernetes.",
+            answer: "Services in Kubernetes provide: 1) Stable IP address and DNS name for accessing pods, 2) Load balancing across multiple pod replicas, 3) Service discovery mechanism, 4) Abstraction layer over changing pod IPs. Types include: ClusterIP (internal only), NodePort (exposes on each node), LoadBalancer (external load balancer), and ExternalName (maps to external DNS)."
+          },
+          {
+            id: 8,
+            question: "What are AWS EC2 instances and when would you use them?",
+            answer: "EC2 (Elastic Compute Cloud) instances are virtual servers in AWS. Use cases: 1) Web application hosting, 2) Development and testing environments, 3) High-performance computing, 4) Batch processing, 5) Custom application hosting. Choose EC2 when you need: full control over the OS, specific instance types, custom networking, or applications not suitable for serverless or containers."
+          },
+          {
+            id: 9,
+            question: "Explain Infrastructure as Code and its benefits.",
+            answer: "Infrastructure as Code (IaC) means managing infrastructure through code rather than manual processes. Benefits: 1) Version control for infrastructure, 2) Reproducible environments, 3) Automated provisioning and deployment, 4) Reduced human errors, 5) Documentation through code, 6) Faster disaster recovery, 7) Cost optimization through tracking. Tools include Terraform, CloudFormation, Ansible."
+          },
+          {
+            id: 10,
+            question: "What is the difference between vertical and horizontal scaling?",
+            answer: "Vertical scaling (scaling up): Adding more resources (CPU, RAM) to existing machines. Pros: simpler, no code changes needed. Cons: hardware limits, downtime during upgrades. Horizontal scaling (scaling out): Adding more machines/instances. Pros: virtually unlimited scaling, better fault tolerance, no downtime. Cons: more complex, requires load balancing, potential data consistency issues."
+          }
+        ];
+        
+        const displayQuestions = questions && questions.length > 0 ? questions : defaultQuestions;
+        %>
+        
+        <% displayQuestions.forEach((q, index) => { %>
+        <div class="accordion-item question-item">
+          <h2 class="accordion-header" id="heading<%= q.id || index %>">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse<%= q.id || index %>">
+              <span class="question-icon">Q</span>
+              <span class="question-text"><%= q.question %></span>
+            </button>
+          </h2>
+          <div id="collapse<%= q.id || index %>" class="accordion-collapse collapse" data-bs-parent="#questionsAccordion">
+            <div class="accordion-body">
+              <div class="answer-content">
+                <% if (q.answer) { %>
+                  <p><%= q.answer %></p>
+                <% } else { %>
+                  <p class="text-muted">Answer will be available soon...</p>
+                <% } %>
+              </div>
+              <div class="action-buttons">
+                <button class="btn-action btn-learn" onclick="alert('Learn More feature coming soon!')">
+                  <i class="fas fa-graduation-cap"></i> Learn More
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <% }); %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  body {
+    background: #f5f7fa;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    padding-top: 60px;
+  }
+
+  .interview-prep-container {
+    min-height: 100vh;
+    padding: 2rem 0;
+  }
+
+  .prep-header {
+    background: linear-gradient(135deg, #e8f5e9 0%, #fff9c4 50%, #e1f5fe 100%);
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  }
+
+  .prep-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #000;
+  }
+
+  .role-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 0.5rem;
+  }
+
+  .role-skills {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 1rem;
+  }
+
+  .badge-pill {
+    background: #000;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    display: inline-block;
+  }
+
+  .user-info {
+    text-align: right;
+  }
+
+  .questions-section {
+    background: white;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  }
+
+  .section-heading {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #000;
+  }
+
+  .accordion-item {
+    border: none;
+    margin-bottom: 1rem;
+    border-radius: 12px !important;
+    overflow: hidden;
+    background: #f8f9fa;
+  }
+
+  .accordion-button {
+    background: #f8f9fa;
+    color: #000;
+    border: none;
+    padding: 1.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    box-shadow: none !important;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .accordion-button:not(.collapsed) {
+    background: #f8f9fa;
+    color: #000;
+  }
+
+  .accordion-button::after {
+    margin-left: auto;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23000'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+  }
+
+  .question-icon {
+    width: 32px;
+    height: 32px;
+    background: #e0e0e0;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    color: #555;
+    flex-shrink: 0;
+  }
+
+  .question-text {
+    flex: 1;
+    text-align: left;
+  }
+
+  .accordion-body {
+    background: white;
+    padding: 1.5rem;
+    border-top: 1px solid #e9ecef;
+  }
+
+  .answer-content {
+    color: #333;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+  }
+
+  .action-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .btn-action {
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 8px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .btn-learn {
+    background: #e3f2fd;
+    color: #1976d2;
+    border: 1px solid #bbdefb;
+  }
+
+  .btn-learn:hover {
+    background: #bbdefb;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(25, 118, 210, 0.2);
+  }
+
+  /* Navbar styles */
+  .navbar {
+    background: rgba(15, 22, 36, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .navbar-brand {
+    color: #fff !important;
+  }
+
+  .logo-icon {
+    background: linear-gradient(135deg, #5b6ef7, #7b5ef7);
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .nav-link {
+    color: rgba(255, 255, 255, 0.8) !important;
+  }
+
+  .nav-link:hover {
+    color: #fff !important;
+  }
+
+  .dropdown-menu {
+    background: #1a1f35;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .dropdown-item {
+    color: rgba(255, 255, 255, 0.8);
+  }
+
+  .dropdown-item:hover {
+    background: rgba(91, 110, 247, 0.2);
+    color: #fff;
+  }
+
+  .dropdown-header {
+    color: rgba(255, 255, 255, 0.5);
+  }
+
+  @media (max-width: 768px) {
+    .prep-header {
+      padding: 1.5rem;
+    }
+
+    .role-title {
+      font-size: 1.5rem;
+    }
+
+    .questions-section {
+      padding: 1rem;
+    }
+
+    .accordion-button {
+      padding: 1rem;
+      font-size: 0.9rem;
+    }
+  }
+</style>
+
+<%- include('partials/footer') %>

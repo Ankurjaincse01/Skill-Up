@@ -49,20 +49,8 @@
             <li><a class="dropdown-item" href="/mock-test/technical">Technical Tests</a></li>
           </ul>
         </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="questionBankDropdown" role="button" data-bs-toggle="dropdown">
-            Question Bank
-          </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="/question-bank/frontend">Frontend Developer</a></li>
-            <li><a class="dropdown-item" href="/question-bank/backend">Backend Developer</a></li>
-            <li><a class="dropdown-item" href="/question-bank/fullstack">Full Stack Developer</a></li>
-            <li><a class="dropdown-item" href="/question-bank/devops">DevOps Engineer</a></li>
-            <li><a class="dropdown-item" href="/question-bank/mobile">Mobile Developer</a></li>
-            <li><a class="dropdown-item" href="/question-bank/data-engineer">Data Engineer</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="/question-bank/all">All Questions</a></li>
-          </ul>
+        <li class="nav-item">
+          <a class="nav-link" href="/prep-ai">Prep AI</a>
         </li>
       </ul>
       <ul class="navbar-nav ms-auto">
@@ -242,12 +230,7 @@
           </div>
           <h4 class="cheatsheet-title">Arrays & Strings</h4>
           <ul class="cheatsheet-list">
-            <li>Two Pointers</li>
-            <li>Sliding Window</li>
-            <li>Kadane's Algorithm</li>
-            <li>Prefix Sum</li>
           </ul>
-          <a href="/prepare/data-structures" class="cheatsheet-link">Learn More →</a>
         </div>
       </div>
       
@@ -259,12 +242,7 @@
           </div>
           <h4 class="cheatsheet-title">Linked Lists</h4>
           <ul class="cheatsheet-list">
-            <li>Fast & Slow Pointers</li>
-            <li>Reverse List</li>
-            <li>Merge Lists</li>
-            <li>Cycle Detection</li>
           </ul>
-          <a href="/prepare/data-structures" class="cheatsheet-link">Learn More →</a>
         </div>
       </div>
       
@@ -276,12 +254,7 @@
           </div>
           <h4 class="cheatsheet-title">Trees & Graphs</h4>
           <ul class="cheatsheet-list">
-            <li>DFS & BFS</li>
-            <li>Binary Search Tree</li>
-            <li>Dijkstra's Algorithm</li>
-            <li>Topological Sort</li>
           </ul>
-          <a href="/prepare/algorithms" class="cheatsheet-link">Learn More →</a>
         </div>
       </div>
       
@@ -293,12 +266,7 @@
           </div>
           <h4 class="cheatsheet-title">Dynamic Programming</h4>
           <ul class="cheatsheet-list">
-            <li>0/1 Knapsack</li>
-            <li>Longest Common Subsequence</li>
-            <li>Edit Distance</li>
-            <li>DP on Trees</li>
           </ul>
-          <a href="/prepare/algorithms" class="cheatsheet-link">Learn More →</a>
         </div>
       </div>
       
@@ -310,12 +278,7 @@
           </div>
           <h4 class="cheatsheet-title">Sorting & Searching</h4>
           <ul class="cheatsheet-list">
-            <li>Binary Search</li>
-            <li>Quick Sort</li>
-            <li>Merge Sort</li>
-            <li>Heap Sort</li>
           </ul>
-          <a href="/prepare/algorithms" class="cheatsheet-link">Learn More →</a>
         </div>
       </div>
       
@@ -327,20 +290,15 @@
           </div>
           <h4 class="cheatsheet-title">System Design</h4>
           <ul class="cheatsheet-list">
-            <li>Load Balancing</li>
-            <li>Caching Strategies</li>
-            <li>Database Sharding</li>
-            <li>Microservices</li>
           </ul>
-          <a href="/prepare/system-design" class="cheatsheet-link">Learn More →</a>
         </div>
       </div>
     </div>
     
     <!-- View All Button -->
     <div class="text-center mt-5" data-aos="fade-up">
-      <button class="btn btn-view-all" onclick="window.location.href='/question-bank'">
-        View All Topics →
+      <button class="btn btn-view-all" onclick="window.location.href='/dsa-question'">
+        View All DSA →
       </button>
     </div>
   </div>
@@ -352,13 +310,11 @@
     <h2 class="section-title text-center mb-5" data-aos="fade-up">Choose a Learning Path</h2>
     
     <div class="row g-4 justify-content-center">
-      <!-- Aptitude Path -->
+      <!-- Interview Preparation Path -->
       <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
         <div class="learning-path-card">
-          <h3 class="path-title">Aptitude</h3>
-          <p class="path-description">Sharpen your quantitative, logical, and verbal reasoning skills with comprehensive practice modules.</p>
-          
-          <button class="btn btn-path-dark mt-4">Prepare Now →</button>
+          <h3 class="path-title">Interview Preparation</h3>
+          <p class="path-description">Ace your interviews with curated DSA questions, system design patterns, and behavioral prep guidance.</p>
         </div>
       </div>
       
@@ -384,5 +340,68 @@
     </div>
   </div>
 </section>
+
+<!-- Interview Journey Modal -->
+<div class="modal fade" id="interviewJourneyModal" tabindex="-1" aria-labelledby="interviewJourneyModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content" style="border-radius: 20px; border: none;">
+      <div class="modal-header" style="border-bottom: none; padding: 2rem 2rem 1rem;">
+        <h5 class="modal-title fw-bold" id="interviewJourneyModalLabel">Start a New Interview Journey</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body" style="padding: 1rem 2rem 2rem;">
+        <p class="text-muted mb-4">Fill out a few quick details and unlock your personalized set of interview questions!</p>
+        
+        <form id="interviewJourneyForm">
+          <div class="mb-3">
+            <label for="targetRole" class="form-label fw-semibold">Target Role</label>
+            <input type="text" class="form-control" id="targetRole" placeholder="Frontend Developer" required style="padding: 0.75rem; border-radius: 10px;">
+          </div>
+          
+          <div class="mb-3">
+            <label for="yearsExperience" class="form-label fw-semibold">Years of Experience</label>
+            <input type="number" class="form-control" id="yearsExperience" placeholder="5" min="0" max="30" required style="padding: 0.75rem; border-radius: 10px;">
+          </div>
+          
+          <div class="mb-3">
+            <label for="focusTopics" class="form-label fw-semibold">Topics to Focus On</label>
+            <input type="text" class="form-control" id="focusTopics" placeholder="CI/CD, Docker, Kubernetes, and AWS" required style="padding: 0.75rem; border-radius: 10px;">
+          </div>
+          
+          <div class="mb-4">
+            <label for="journeyDescription" class="form-label fw-semibold">Description</label>
+            <textarea class="form-control" id="journeyDescription" rows="3" placeholder="Preparing for senior-level cloud-native roles" required style="padding: 0.75rem; border-radius: 10px;"></textarea>
+          </div>
+          
+          <button type="submit" class="btn w-100" style="background: linear-gradient(135deg, #ff9a76 0%, #ff6b9d 100%); color: white; padding: 1rem; border-radius: 10px; border: none; font-weight: 600; font-size: 1.1rem;">
+            Create Session
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+function openInterviewModal(role, skills, experience) {
+  document.getElementById('targetRole').value = role;
+  document.getElementById('yearsExperience').value = experience;
+  document.getElementById('focusTopics').value = skills;
+  document.getElementById('journeyDescription').value = 'Preparing for senior-level ' + role.toLowerCase() + ' roles';
+  
+  const modal = new bootstrap.Modal(document.getElementById('interviewJourneyModal'));
+  modal.show();
+}
+
+document.getElementById('interviewJourneyForm')?.addEventListener('submit', function(e) {
+  e.preventDefault();
+  
+  const role = document.getElementById('targetRole').value;
+  const roleSlug = role.toLowerCase().replace(/\s+/g, '-');
+  
+  // Redirect to prep-ai for that role
+  window.location.href = '/prep-ai/' + roleSlug;
+});
+</script>
 
 <%- include('partials/footer') %>

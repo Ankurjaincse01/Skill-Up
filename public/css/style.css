@@ -1165,6 +1165,77 @@ html {
   margin-bottom: 3rem;
 }
 
+/* ===================================
+   Interview Journey Cards
+   =================================== */
+.interview-journey-section {
+  background: var(--primary-dark);
+  padding: 4rem 0;
+}
+
+.interview-card {
+  background: var(--secondary-dark);
+  border-radius: 20px;
+  padding: 1.75rem;
+  height: 100%;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.interview-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.interview-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: #2c3e50;
+  flex-shrink: 0;
+}
+
+.interview-role {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 0.25rem;
+}
+
+.interview-skills {
+  font-size: 0.875rem;
+  color: #546e7a;
+  line-height: 1.4;
+}
+
+.interview-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.interview-meta .badge {
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 0.4rem 0.75rem;
+  border-radius: 6px;
+}
+
+.interview-description {
+  font-size: 0.9rem;
+  color: #37474f;
+  font-weight: 500;
+}
+
 .learning-path-card {
   background: var(--secondary-dark);
   border-radius: 16px;
@@ -1411,3 +1482,268 @@ html {
 
 
 
+
+/* Topic Header Styles */
+.topic-header {
+  background: rgba(26, 31, 53, 0.8);
+  backdrop-filter: blur(10px);
+  padding: 1.5rem 2rem;
+  border-radius: 12px 12px 0 0;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: none;
+}
+
+.topic-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+
+.question-table {
+  width: 100%;
+  background: rgba(26, 31, 53, 0.6);
+  backdrop-filter: blur(10px);
+  border-radius: 0 0 12px 12px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: none;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+.question-table thead {
+  background: rgba(91, 110, 247, 0.15);
+}
+
+.question-table thead tr th {
+  padding: 1.2rem 1.5rem;
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--text-primary);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-bottom: 2px solid rgba(91, 110, 247, 0.3);
+}
+
+.question-table tbody tr {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  transition: var(--transition);
+}
+
+.question-table tbody tr:hover {
+  background: rgba(91, 110, 247, 0.08);
+  transform: translateX(5px);
+}
+
+.question-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.question-table tbody tr td {
+  padding: 1rem 1.5rem;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+.question-table tbody tr td:first-child {
+  color: var(--text-primary);
+  font-weight: 500;
+  max-width: 600px;
+}
+
+/* ===================================
+   Question Bank Styles
+   =================================== */
+.question-bank-section {
+  background: var(--primary-dark);
+  min-height: 100vh;
+  padding: 6rem 0 4rem;
+}
+
+.btn-view-all-topics {
+  background: linear-gradient(135deg, #5b6ef7, #7b5ef7);
+  border: none;
+  color: var(--text-primary);
+  padding: 1.2rem 3rem;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 30px rgba(91, 110, 247, 0.4);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.btn-view-all-topics:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 40px rgba(91, 110, 247, 0.6);
+  background: linear-gradient(135deg, #6b7ef7, #8b6ef7);
+}
+
+.btn-view-all-topics i {
+  transition: transform 0.3s ease;
+}
+
+.btn-view-all-topics:hover i {
+  transform: translateX(5px);
+}
+
+#questionBankContent {
+  animation: fadeInDown 0.6s ease;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.topic-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+
+.topic-pill {
+  background: rgba(91, 110, 247, 0.1);
+  border: 1px solid rgba(91, 110, 247, 0.3);
+  color: var(--text-secondary);
+  padding: 0.5rem 1.5rem;
+  border-radius: 25px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.topic-pill:hover {
+  background: rgba(91, 110, 247, 0.2);
+  border-color: var(--accent-blue);
+  color: var(--text-primary);
+  transform: translateY(-2px);
+}
+
+.topic-pill.active {
+  background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
+  border-color: transparent;
+  color: var(--text-primary);
+}
+
+.topic-section {
+  margin-bottom: 4rem;
+  opacity: 0;
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.link-btn {
+  display: inline-block;
+  padding: 0.4rem 1.2rem;
+  background: rgba(91, 110, 247, 0.15);
+  border: 1px solid rgba(91, 110, 247, 0.4);
+  border-radius: 6px;
+  color: var(--accent-cyan);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.85rem;
+  transition: var(--transition);
+}
+
+.link-btn:hover {
+  background: rgba(91, 110, 247, 0.25);
+  border-color: var(--accent-blue);
+  color: var(--text-primary);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(91, 110, 247, 0.3);
+}
+
+.link-btn.practice {
+  background: rgba(0, 217, 163, 0.15);
+  border-color: rgba(0, 217, 163, 0.4);
+  color: var(--accent-green);
+}
+
+.link-btn.practice:hover {
+  background: rgba(0, 217, 163, 0.25);
+  border-color: var(--accent-green);
+}
+
+/* Responsive Design for Question Bank */
+@media (max-width: 992px) {
+  .topic-title {
+    font-size: 1.5rem;
+  }
+  
+  .question-table thead tr th,
+  .question-table tbody tr td {
+    padding: 0.8rem 1rem;
+    font-size: 0.85rem;
+  }
+  
+  .link-btn {
+    padding: 0.3rem 0.8rem;
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .question-bank-section {
+    padding: 5rem 0 3rem;
+  }
+  
+  .topic-pills {
+    gap: 0.5rem;
+  }
+  
+  .topic-pill {
+    padding: 0.4rem 1rem;
+    font-size: 0.8rem;
+  }
+  
+  .topic-title {
+    font-size: 1.3rem;
+  }
+  
+  .question-table {
+    font-size: 0.8rem;
+  }
+  
+  .question-table thead tr th {
+    font-size: 0.75rem;
+    padding: 0.8rem 0.5rem;
+  }
+  
+  .question-table tbody tr td {
+    padding: 0.7rem 0.5rem;
+    font-size: 0.8rem;
+  }
+  
+  .link-btn {
+    padding: 0.3rem 0.6rem;
+    font-size: 0.7rem;
+  }
+}

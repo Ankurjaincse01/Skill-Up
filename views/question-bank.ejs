@@ -19,64 +19,9 @@
             Prepare
           </a>
           <ul class="dropdown-menu">
-            <li><h6 class="dropdown-header">Programming Languages</h6></li>
-            <li><a class="dropdown-item" href="/prepare/python">Python</a></li>
-            <li><a class="dropdown-item" href="/prepare/java">Java</a></li>
-            <li><a class="dropdown-item" href="/prepare/cpp">C++</a></li>
-            <li><a class="dropdown-item" href="/prepare/javascript">JavaScript</a></li>
-            <li><a class="dropdown-item" href="/prepare/c">C</a></li>
-            <li><hr class="dropdown-divider"></li>
             <li><h6 class="dropdown-header">Core CS Concepts</h6></li>
             <li><a class="dropdown-item" href="/prepare/data-structures">Data Structures</a></li>
             <li><a class="dropdown-item" href="/prepare/algorithms">Algorithms</a></li>
-            <li><a class="dropdown-item" href="/prepare/oops">OOP Concepts</a></li>
-            <li><a class="dropdown-item" href="/prepare/dbms">DBMS</a></li>
-            <li><a class="dropdown-item" href="/prepare/os">Operating Systems</a></li>
-            <li><a class="dropdown-item" href="/prepare/cn">Computer Networks</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><h6 class="dropdown-header">Development</h6></li>
-            <li><a class="dropdown-item" href="/prepare/web-dev">Web Development</a></li>
-            <li><a class="dropdown-item" href="/prepare/system-design">System Design</a></li>
-            <li><a class="dropdown-item" href="/prepare/interview-prep">Interview Prep</a></li>
-          </ul>
-        </li>        npm install connect-mongo        npm install connect-mongo
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="mockTestDropdown" role="button" data-bs-toggle="dropdown">
-            Mock Test
-          </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="/mock-test/coding">Coding Tests</a></li>
-            <li><a class="dropdown-item" href="/mock-test/technical">Technical Tests</a></li>
-          </ul>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle active" href="#" id="questionBankDropdown" role="button" data-bs-toggle="dropdown">
-            Question Bank
-          </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="/question-bank/frontend">Frontend Developer</a></li>
-            <li><a class="dropdown-item" href="/question-bank/backend">Backend Developer</a></li>
-            <li><a class="dropdown-item" href="/question-bank/fullstack">Full Stack Developer</a></li>
-            <li><a class="dropdown-item" href="/question-bank/devops">DevOps Engineer</a></li>
-            <li><a class="dropdown-item" href="/question-bank/mobile">Mobile Developer</a></li>
-            <li><a class="dropdown-item" href="/question-bank/data-engineer">Data Engineer</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="/question-bank/all">All Questions</a></li>
-          </ul>
-        </li>
-      </ul>
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" id="userDropdown" role="button" data-bs-toggle="dropdown">
-            <div class="user-avatar-circle">
-              <%= userName ? userName.charAt(0).toUpperCase() : 'U' %>
-            </div>
-          </a>
-          <ul class="dropdown-menu dropdown-menu-end">
-            <li><a class="dropdown-item" href="/profile"><i class="fas fa-user me-2"></i>Profile</a></li>
-            <li><a class="dropdown-item" href="/settings"><i class="fas fa-cog me-2"></i>Settings</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="/logout"><i class="fas fa-sign-out-alt me-2"></i>Logout</a></li>
           </ul>
         </li>
       </ul>
@@ -84,141 +29,568 @@
   </div>
 </nav>
 
-<!-- Question Bank Page Content -->
-<section class="page-section">
+<!-- Prep AI Section -->
+<section class="question-bank-section" style="padding-top: 5rem; padding-bottom: 3rem;">
   <div class="container">
-    <div class="row">
-      <div class="col-12">
-        <h1 class="page-title mb-4">Question Bank</h1>
-        <p class="text-secondary">Access thousands of practice questions across all topics.</p>
+
+    <!-- Interview Journey Section -->
+    <div class="text-center mb-5">
+      <h2 class="section-title" style="font-size: 2.5rem; font-weight: 700; color: #8b9cff; margin-bottom: 3rem;">Interview Prep AI</h2>
+    </div>
+
+    <div class="row g-4">
+      <!-- Frontend Developer Card -->
+      <div class="col-md-6 col-lg-4">
+        <div class="interview-card" onclick="openInterviewModal('Frontend Developer', 'React.js, DOM manipulation, CSS Flexbox', 2)" style="background: #1a1f35; cursor: pointer;">
+          <div class="d-flex align-items-start mb-3">
+            <div class="interview-icon me-3">FD</div>
+            <div class="flex-grow-1">
+              <h4 class="interview-role mb-1" style="color: white;">Frontend Developer</h4>
+              <p class="interview-skills mb-0" style="color: white;">React.js, DOM manipulation, CSS Flexbox</p>
+            </div>
+          </div>
+          <p class="interview-description mb-0 mt-3" style="color: #a0a8c0;">Preparing for product-based company interviews</p>
+        </div>
+      </div>
+
+      <!-- Backend Developer Card -->
+      <div class="col-md-6 col-lg-4">
+        <div class="interview-card" onclick="openInterviewModal('Backend Developer', 'Node.js, Express, REST APIs, MongoDB', 3)" style="background: #1a1f35; cursor: pointer;">
+          <div class="d-flex align-items-start mb-3">
+            <div class="interview-icon me-3">BD</div>
+            <div class="flex-grow-1">
+              <h4 class="interview-role mb-1" style="color: white;">Backend Developer</h4>
+              <p class="interview-skills mb-0" style="color: white;">Node.js, Express, REST APIs, MongoDB</p>
+            </div>
+          </div>
+          <p class="interview-description mb-0 mt-3" style="color: #a0a8c0;">Want to master backend system design and performance</p>
+        </div>
+      </div>
+
+      <!-- Full Stack Developer Card -->
+      <div class="col-md-6 col-lg-4">
+        <div class="interview-card" onclick="openInterviewModal('Full Stack Developer', 'MERN stack, deployment strategies, authentication', 4)" style="background: #1a1f35; cursor: pointer;">
+          <div class="d-flex align-items-start mb-3">
+            <div class="interview-icon me-3">FS</div>
+            <div class="flex-grow-1">
+              <h4 class="interview-role mb-1" style="color: white;">Full Stack Developer</h4>
+              <p class="interview-skills mb-0" style="color: white;">MERN stack, deployment strategies, authentication</p>
+            </div>
+          </div>
+          <p class="interview-description mb-0 mt-3" style="color: #a0a8c0;">Getting ready for startup tech rounds</p>
+        </div>
+      </div>
+
+      <!-- Data Analyst Card -->
+      <div class="col-md-6 col-lg-4">
+        <div class="interview-card" onclick="openInterviewModal('Data Analyst', 'SQL, Excel, Data Visualization, Power BI', 2)" style="background: #1a1f35; cursor: pointer;">
+          <div class="d-flex align-items-start mb-3">
+            <div class="interview-icon me-3">DA</div>
+            <div class="flex-grow-1">
+              <h4 class="interview-role mb-1" style="color: white;">Data Analyst</h4>
+              <p class="interview-skills mb-0" style="color: white;">SQL, Excel, Data Visualization, Power BI</p>
+            </div>
+          </div>
+          <p class="interview-description mb-0 mt-3" style="color: #a0a8c0;">Targeting analyst roles in finance domain</p>
+        </div>
+      </div>
+
+      <!-- DevOps Engineer Card -->
+      <div class="col-md-6 col-lg-4">
+        <div class="interview-card" onclick="openInterviewModal('DevOps Engineer', 'CI/CD, Docker, Kubernetes, AWS', 5)" style="background: #1a1f35; cursor: pointer;">
+          <div class="d-flex align-items-start mb-3">
+            <div class="interview-icon me-3">DE</div>
+            <div class="flex-grow-1">
+              <h4 class="interview-role mb-1" style="color: white;">DevOps Engineer</h4>
+              <p class="interview-skills mb-0" style="color: white;">CI/CD, Docker, Kubernetes, AWS</p>
+            </div>
+          </div>
+          <p class="interview-description mb-0 mt-3" style="color: #a0a8c0;">Switching to a cloud-native role with more automation</p>
+        </div>
+      </div>
+
+      <!-- UI/UX Designer Card -->
+      <div class="col-md-6 col-lg-4">
+        <div class="interview-card" onclick="openInterviewModal('UI/UX Designer', 'Figma, user journey, wireframing, accessibility', 3)" style="background: #1a1f35; cursor: pointer;">
+          <div class="d-flex align-items-start mb-3">
+            <div class="interview-icon me-3">UD</div>
+            <div class="flex-grow-1">
+              <h4 class="interview-role mb-1" style="color: white;">UI/UX Designer</h4>
+              <p class="interview-skills mb-0" style="color: white;">Figma, user journey, wireframing, accessibility</p>
+            </div>
+          </div>
+          <p class="interview-description mb-0 mt-3" style="color: #a0a8c0;">Preparing for top product design interviews</p>
+        </div>
+      </div>
+
+      <!-- Mobile App Developer Card -->
+      <div class="col-md-6 col-lg-4">
+        <div class="interview-card" onclick="openInterviewModal('Mobile App Developer', 'React Native, Flutter, performance optimization', 2)" style="background: #1a1f35; cursor: pointer;">
+          <div class="d-flex align-items-start mb-3">
+            <div class="interview-icon me-3">MA</div>
+            <div class="flex-grow-1">
+              <h4 class="interview-role mb-1" style="color: white;">Mobile App Developer</h4>
+              <p class="interview-skills mb-0" style="color: white;">React Native, Flutter, performance optimization</p>
+            </div>
+          </div>
+          <p class="interview-description mb-0 mt-3" style="color: #a0a8c0;">Need cross-platform expertise for startup interviews</p>
+        </div>
+      </div>
+
+      <!-- AI/ML Engineer Card -->
+      <div class="col-md-6 col-lg-4">
+        <div class="interview-card" onclick="openInterviewModal('AI/ML Engineer', 'Python, scikit-learn, model deployment, NLP', 1)" style="background: #1a1f35; cursor: pointer;">
+          <div class="d-flex align-items-start mb-3">
+            <div class="interview-icon me-3">AE</div>
+            <div class="flex-grow-1">
+              <h4 class="interview-role mb-1" style="color: white;">AI/ML Engineer</h4>
+              <p class="interview-skills mb-0" style="color: white;">Python, scikit-learn, model deployment, NLP</p>
+            </div>
+          </div>
+          <p class="interview-description mb-0 mt-3" style="color: #a0a8c0;">Cracking ML internship and entry-level roles</p>
+        </div>
+      </div>
+
+      <!-- Product Manager Card -->
+      <div class="col-md-6 col-lg-4">
+        <div class="interview-card" onclick="openInterviewModal('Product Manager', 'Roadmapping, user stories, KPIs, stakeholder communication', 4)" style="background: #1a1f35; cursor: pointer;">
+          <div class="d-flex align-items-start mb-3">
+            <div class="interview-icon me-3">PM</div>
+            <div class="flex-grow-1">
+              <h4 class="interview-role mb-1" style="color: white;">Product Manager</h4>
+              <p class="interview-skills mb-0" style="color: white;">Roadmapping, user stories, KPIs, stakeholder communication</p>
+            </div>
+          </div>
+          <p class="interview-description mb-0 mt-3" style="color: #a0a8c0;">Pivoting into tech PM from business analyst background</p>
+        </div>
       </div>
     </div>
+
   </div>
 </section>
 
-<!-- DSA Preparation Cheat Sheet Section -->
-<section class="cheatsheet-section py-5">
-  <div class="container">
-    <div class="row justify-content-center text-center mb-5">
-      <div class="col-lg-10">
-        <h2 class="section-title mb-3" data-aos="fade-up">DSA Preparation Cheat Sheet</h2>
-        <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
-          Quick reference guide for mastering Data Structures & Algorithms for top tech interviews.
-        </p>
+<!-- Interview Journey Modal -->
+<div class="modal fade" id="interviewModal" tabindex="-1" aria-labelledby="interviewModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content" style="border-radius: 20px; border: none; background: white;">
+      <div class="modal-header" style="border-bottom: none; padding: 2rem 2rem 1rem;">
+        <h5 class="modal-title fw-bold" id="interviewModalLabel" style="color: #6366f1;">Start a New Interview Journey</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-    </div>
-    
-    <div class="row g-4">
-      <!-- Arrays & Strings -->
-      <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
-        <div class="cheatsheet-card">
-          <div class="cheatsheet-icon">
-            <i class="fas fa-list"></i>
+      <div class="modal-body" style="padding: 1rem 2rem 2rem;">
+        <p style="color: #6b7280; margin-bottom: 1.5rem;">Fill out a few quick details and unlock your personalized set of interview questions!</p>
+        
+        <form id="interviewForm">
+          <div class="mb-3">
+            <label for="targetRole" class="form-label fw-semibold" style="color: #1f2937; font-size: 0.95rem;">Target Role</label>
+            <input type="text" class="form-control interview-input" id="targetRole" placeholder="e.g., QA Engineer" required style="padding: 0.75rem; border-radius: 10px; background: #f3f4f6; border: 1px solid #d1d5db; color: #1f2937; font-size: 0.95rem;">
           </div>
-          <h4 class="cheatsheet-title">Arrays & Strings</h4>
-          <ul class="cheatsheet-list">
-            <li>Two Pointers</li>
-            <li>Sliding Window</li>
-            <li>Kadane's Algorithm</li>
-            <li>Prefix Sum</li>
-          </ul>
-          <a href="/prepare/data-structures" class="cheatsheet-link">Learn More →</a>
-        </div>
-      </div>
-      
-      <!-- Linked Lists -->
-      <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
-        <div class="cheatsheet-card">
-          <div class="cheatsheet-icon">
-            <i class="fas fa-link"></i>
+          
+          <div class="mb-3">
+            <label for="topicsFocus" class="form-label fw-semibold" style="color: #1f2937; font-size: 0.95rem;">Topics to Focus On</label>
+            <input type="text" class="form-control interview-input" id="topicsFocus" placeholder="Selenium, TestNG, Automation, API Testing" required style="padding: 0.75rem; border-radius: 10px; background: #f3f4f6; border: 1px solid #d1d5db; color: #1f2937; font-size: 0.95rem;">
           </div>
-          <h4 class="cheatsheet-title">Linked Lists</h4>
-          <ul class="cheatsheet-list">
-            <li>Fast & Slow Pointers</li>
-            <li>Reverse List</li>
-            <li>Merge Lists</li>
-            <li>Cycle Detection</li>
-          </ul>
-          <a href="/prepare/data-structures" class="cheatsheet-link">Learn More →</a>
-        </div>
-      </div>
-      
-      <!-- Trees & Graphs -->
-      <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
-        <div class="cheatsheet-card">
-          <div class="cheatsheet-icon">
-            <i class="fas fa-sitemap"></i>
+          
+          <div class="mb-4">
+            <label for="description" class="form-label fw-semibold" style="color: #1f2937; font-size: 0.95rem;">Description</label>
+            <textarea class="form-control interview-input" id="description" rows="3" placeholder="Any specific goals or notes for this session" style="padding: 0.75rem; border-radius: 10px; background: #f3f4f6; border: 1px solid #d1d5db; color: #1f2937; font-size: 0.95rem;"></textarea>
           </div>
-          <h4 class="cheatsheet-title">Trees & Graphs</h4>
-          <ul class="cheatsheet-list">
-            <li>DFS & BFS</li>
-            <li>Binary Search Tree</li>
-            <li>Dijkstra's Algorithm</li>
-            <li>Topological Sort</li>
-          </ul>
-          <a href="/prepare/algorithms" class="cheatsheet-link">Learn More →</a>
-        </div>
+          
+          <button type="submit" class="btn w-100" style="background: #000; color: white; padding: 1rem; border-radius: 10px; border: none; font-weight: 600; font-size: 1.05rem;">
+            Create Session
+          </button>
+        </form>
       </div>
-      
-      <!-- Dynamic Programming -->
-      <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
-        <div class="cheatsheet-card">
-          <div class="cheatsheet-icon">
-            <i class="fas fa-code-branch"></i>
-          </div>
-          <h4 class="cheatsheet-title">Dynamic Programming</h4>
-          <ul class="cheatsheet-list">
-            <li>0/1 Knapsack</li>
-            <li>Longest Common Subsequence</li>
-            <li>Edit Distance</li>
-            <li>DP on Trees</li>
-          </ul>
-          <a href="/prepare/algorithms" class="cheatsheet-link">Learn More →</a>
-        </div>
-      </div>
-      
-      <!-- Sorting & Searching -->
-      <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
-        <div class="cheatsheet-card">
-          <div class="cheatsheet-icon">
-            <i class="fas fa-sort"></i>
-          </div>
-          <h4 class="cheatsheet-title">Sorting & Searching</h4>
-          <ul class="cheatsheet-list">
-            <li>Binary Search</li>
-            <li>Quick Sort</li>
-            <li>Merge Sort</li>
-            <li>Heap Sort</li>
-          </ul>
-          <a href="/prepare/algorithms" class="cheatsheet-link">Learn More →</a>
-        </div>
-      </div>
-      
-      <!-- System Design -->
-      <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
-        <div class="cheatsheet-card">
-          <div class="cheatsheet-icon">
-            <i class="fas fa-server"></i>
-          </div>
-          <h4 class="cheatsheet-title">System Design</h4>
-          <ul class="cheatsheet-list">
-            <li>Load Balancing</li>
-            <li>Caching Strategies</li>
-            <li>Database Sharding</li>
-            <li>Microservices</li>
-          </ul>
-          <a href="/prepare/system-design" class="cheatsheet-link">Learn More →</a>
-        </div>
-      </div>
-    </div>
-    
-    <!-- View All Button -->
-    <div class="text-center mt-5" data-aos="fade-up">
-      <button class="btn btn-view-all" onclick="window.location.href='/question-bank'">
-        View All Topics →
-      </button>
     </div>
   </div>
-</section>
+</div>
+
+<script>
+function openInterviewModal(role, skills, experience) {
+  document.getElementById('targetRole').value = role;
+  document.getElementById('topicsFocus').value = skills;
+  document.getElementById('description').value = '';
+  
+  const modal = new bootstrap.Modal(document.getElementById('interviewModal'));
+  modal.show();
+}
+
+document.getElementById('interviewForm')?.addEventListener('submit', function(e) {
+  e.preventDefault();
+  
+  const role = document.getElementById('targetRole').value;
+  const roleSlug = role.toLowerCase().replace(/\s+/g, '-').replace(/\//g, '-');
+  
+  // Close modal
+  const modal = bootstrap.Modal.getInstance(document.getElementById('interviewModal'));
+  modal.hide();
+  
+  // Redirect to prep-ai for that role
+  window.location.href = '/prep-ai/' + roleSlug;
+});
+</script>
+
+<style>
+  body {
+    padding-top: 60px;
+  }
+
+  /* Modal Input Styling */
+  .interview-input::placeholder {
+    color: #9ca3af !important;
+    opacity: 1;
+  }
+  
+  .interview-input:focus {
+    outline: none;
+    border-color: #6366f1 !important;
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1) !important;
+  }
+
+  .page-title {
+    color: #fff;
+    font-size: 2.5rem;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    text-shadow: 0 2px 10px rgba(91, 110, 247, 0.3);
+  }
+
+  .question-bank-section {
+    padding: 0 2rem 4rem 2rem;
+  }
+
+  /* Roles Container */
+  .roles-container {
+    background: rgba(26, 31, 53, 0.6);
+    border: 1px solid rgba(91, 110, 247, 0.2);
+    border-radius: 12px;
+    padding: 0;
+    overflow: hidden;
+    max-width: 400px;
+  }
+
+  .roles-header {
+    background: rgba(91, 110, 247, 0.15);
+    border-bottom: 2px solid rgba(91, 110, 247, 0.3);
+    color: #fff;
+    font-weight: 700;
+    padding: 1.5rem;
+    margin: 0;
+    font-size: 1.3rem;
+    border-radius: 12px 12px 0 0;
+  }
+
+  .roles-list {
+    padding: 0;
+  }
+
+  .role-item {
+    padding: 1.25rem 1.5rem;
+    color: #a0a8c0;
+    border-bottom: 1px solid rgba(91, 110, 247, 0.1);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+  }
+
+  .role-item:hover {
+    background: rgba(91, 110, 247, 0.1);
+    color: #fff;
+    padding-left: 2rem;
+  }
+
+  .role-item span {
+    font-size: 1rem;
+    font-weight: 500;
+  }
+
+  .roles-divider {
+    height: 1px;
+    background: rgba(91, 110, 247, 0.2);
+    margin: 0.5rem 0;
+  }
+
+  .role-item:last-child {
+    border-bottom: none;
+  }
+
+  .btn-view-all-topics {
+    background: linear-gradient(135deg, #5b6ef7, #7b5ef7);
+    border: 2px solid rgba(91, 110, 247, 0.4);
+    color: #fff;
+    padding: 1rem 3rem;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 30px rgba(91, 110, 247, 0.3);
+  }
+
+  .btn-view-all-topics:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 40px rgba(91, 110, 247, 0.5);
+  }
+
+  /* Interview Modal */
+  .interview-modal-content {
+    background: #ffffff;
+    border: none;
+    border-radius: 16px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+  }
+
+  .interview-modal-body {
+    padding: 0;
+    display: flex;
+    gap: 0;
+  }
+
+  .interview-header-section {
+    background: #ffffff;
+    padding: 3rem 2.5rem;
+    flex: 0 0 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border-right: 1px solid #f0f0f0;
+  }
+
+  .interview-title {
+    color: #5b6ef7;
+    font-size: 2rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+  }
+
+  .interview-subtitle {
+    color: #8a92a8;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin: 0;
+  }
+
+  .interview-form-section {
+    flex: 1;
+    padding: 2.5rem;
+  }
+
+  .interview-input {
+    background: #f8f9fa;
+    border: 1px solid #e5e7eb;
+    color: #1a1f35;
+    padding: 0.75rem 1rem;
+    font-size: 0.95rem;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+  }
+
+  .interview-input:focus {
+    background: #fff;
+    border-color: #5b6ef7;
+    box-shadow: 0 0 0 3px rgba(91, 110, 247, 0.1);
+    color: #1a1f35;
+  }
+
+  .interview-input::placeholder {
+    color: #b0b8c8;
+  }
+
+  .interview-modal-content .form-label {
+    color: #1a1f35;
+    font-weight: 600;
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .btn-create-session {
+    background: linear-gradient(135deg, #f5a962, #f89a6b);
+    border: none;
+    color: #fff;
+    padding: 0.85rem 1.5rem;
+    font-weight: 600;
+    font-size: 1rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+
+  .btn-create-session:hover {
+    background: linear-gradient(135deg, #f89a6b, #fc8c5a);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(245, 169, 98, 0.3);
+    color: #fff;
+  }
+
+  .filter-section {
+    background: rgba(26, 31, 53, 0.5);
+    padding: 2rem;
+    border-radius: 12px;
+    border: 1px solid rgba(91, 110, 247, 0.2);
+  }
+
+  .form-label {
+    color: #a0a8c0;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+
+  .form-control, .form-select {
+    height: 45px !important;
+    border-radius: 8px;
+  }
+
+  .form-control:focus, .form-select:focus {
+    border-color: #5b6ef7 !important;
+    box-shadow: 0 0 0 0.2rem rgba(91, 110, 247, 0.25);
+  }
+
+  .table-wrapper {
+    background: rgba(26, 31, 53, 0.8);
+    border: 1px solid rgba(91, 110, 247, 0.2);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  }
+
+  .dsa-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: transparent;
+  }
+
+  .dsa-table thead {
+    background: rgba(91, 110, 247, 0.15);
+    border-bottom: 2px solid rgba(91, 110, 247, 0.3);
+  }
+
+  .dsa-table thead th {
+    padding: 1.5rem;
+    color: #fff;
+    font-weight: 700;
+    text-align: left;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+  }
+
+  .question-col {
+    width: 50%;
+  }
+
+  .article-col {
+    width: 25%;
+  }
+
+  .practice-col {
+    width: 25%;
+  }
+
+  .dsa-table tbody tr {
+    border-bottom: 1px solid rgba(91, 110, 247, 0.1);
+    transition: all 0.2s ease;
+  }
+
+  .dsa-table tbody tr:hover {
+    background: rgba(91, 110, 247, 0.08);
+  }
+
+  .dsa-table tbody td {
+    padding: 1.2rem 1.5rem;
+    color: #a0a8c0;
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  .dsa-table tbody tr:last-child {
+    border-bottom: none;
+  }
+
+  .link-btn {
+    display: inline-block;
+    color: #00e5ff;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.4rem 0.8rem;
+    border-radius: 6px;
+    border: 1px solid rgba(0, 229, 255, 0.3);
+    background: rgba(0, 229, 255, 0.1);
+    transition: all 0.2s ease;
+  }
+
+  .link-btn:hover {
+    background: rgba(0, 229, 255, 0.2);
+    border-color: rgba(0, 229, 255, 0.6);
+    color: #fff;
+  }
+
+  .link-btn.practice {
+    color: #00d9a3;
+    border-color: rgba(0, 217, 163, 0.3);
+    background: rgba(0, 217, 163, 0.1);
+  }
+
+  .link-btn.practice:hover {
+    background: rgba(0, 217, 163, 0.2);
+    border-color: rgba(0, 217, 163, 0.6);
+  }
+
+  .pagination-wrapper {
+    text-align: center;
+  }
+
+  .pagination {
+    background: rgba(26, 31, 53, 0.5);
+    padding: 1rem;
+    border-radius: 8px;
+    border: 1px solid rgba(91, 110, 247, 0.2);
+  }
+
+  .page-link {
+    background: transparent;
+    border: 1px solid rgba(91, 110, 247, 0.3);
+    color: #5b6ef7;
+    border-radius: 6px;
+    padding: 0.5rem 1rem;
+    margin: 0 0.3rem;
+  }
+
+  .page-link:hover {
+    background: rgba(91, 110, 247, 0.15);
+    border-color: #5b6ef7;
+    color: #fff;
+  }
+
+  .page-item.active .page-link {
+    background: linear-gradient(135deg, #5b6ef7, #7b5ef7);
+    border-color: transparent;
+    color: #fff;
+  }
+
+  @media (max-width: 768px) {
+    .question-col { width: 40%; }
+    .article-col { width: 30%; }
+    .practice-col { width: 30%; }
+
+    .dsa-table thead th,
+    .dsa-table tbody td {
+      padding: 0.8rem;
+      font-size: 0.85rem;
+    }
+
+    .link-btn {
+      padding: 0.3rem 0.6rem;
+      font-size: 0.8rem;
+    }
+  }
+</style>
+
+
+
+
 
 <%- include('partials/footer') %>

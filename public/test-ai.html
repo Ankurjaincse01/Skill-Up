@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test Gemini AI</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 800px;
+      margin: 50px auto;
+      padding: 20px;
+      background: #f5f5f5;
+    }
+    .test-box {
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      margin-bottom: 20px;
+    }
+    button {
+      background: #4CAF50;
+      color: white;
+      border: none;
+      padding: 15px 30px;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+      margin: 10px 5px;
+    }
+    button:hover {
+      background: #45a049;
+    }
+    button:disabled {
+      background: #ccc;
+      cursor: not-allowed;
+    }
+    #result {
+      margin-top: 20px;
+      padding: 20px;
+      background: #f9f9f9;
+      border-left: 4px solid #4CAF50;
+      border-radius: 5px;
+      white-space: pre-wrap;
+      display: none;
+    }
+    .loading {
+      color: #666;
+      font-style: italic;
+    }
+    h1 {
+      color: #333;
+    }
+    h2 {
+      color: #666;
+      font-size: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="test-box">
+    <h1>🤖 Gemini AI Test Page</h1>
+    <p>Test the Gemini AI integration by generating interview questions and answers.</p>
+    
+    <h2>Test 1: Generate Single Answer</h2>
+    <button onclick="testSingleAnswer()">Generate Answer for "What is Docker?"</button>
+    
+    <h2>Test 2: Generate Multiple Questions</h2>
+    <button onclick="testMultipleQuestions()">Generate 5 DevOps Questions</button>
+    
+    <h2>Test 3: Generate Learning Resources</h2>
+    <button onclick="testResources()">Get Resources for "Kubernetes"</button>
+    
+    <div id="result"></div>
+  </div>
+
+  <script>
+    const resultDiv = document.getElementById('result');
+
+    async function testSingleAnswer() {
+      showLoading('Generating answer...');
+      
+      try {
+        const response = await fetch('/question-bank/api/generate-answer', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            question: 'What is Docker and why is it useful?',
+            role: 'DevOps Engineer',
+            context: 'Containerization, CI/CD'
+          })
+        });
+        
+        const data = await response.json();
+        
+        if (data.success) {
+          showResult('✅ SUCCESS!\n\nQuestion: ' + data.question + '\n\nAnswer:\n' + data.answer);
+        } else {
+          showResult('❌ ERROR: ' + data.error);
+        }
+      } catch (error) {
+        showResult('❌ ERROR: ' + error.message);
+      }
+    }
+
+    async function testMultipleQuestions() {
+      showLoading('Generating 5 questions... (this may take 10-20 seconds)');
+      
+      try {
+        const response = await fetch('/question-bank/api/generate-questions', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            role: 'DevOps Engineer',
+            topics: 'Docker, Kubernetes, CI/CD',
+            count: 5
+          })
+        });
+        
+        const data = await response.json();
+        
+        if (data.success) {
+          let output = '✅ SUCCESS!\n\nGenerated ' + data.questions.length + ' questions:\n\n';
+          data.questions.forEach((q, i) => {
+            output += `${i + 1}. ${q.question}\n\nAnswer: ${q.answer}\n\n${'='.repeat(80)}\n\n`;
+          });
+          showResult(output);
+        } else {
+          showResult('❌ ERROR: ' + data.error);
+        }
+      } catch (error) {
+        showResult('❌ ERROR: ' + error.message);
+      }
+    }
+
+    async function testResources() {
+      showLoading('Generating learning resources...');
+      
+      try {
+        const response = await fetch('/question-bank/api/generate-resources', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            topic: 'Kubernetes',
+            role: 'DevOps Engineer'
+          })
+        });
+        
+        const data = await response.json();
+        
+        if (data.success) {
+          showResult('✅ SUCCESS!\n\nTopic: ' + data.topic + '\n\nResources:\n' + data.resources);
+        } else {
+          showResult('❌ ERROR: ' + data.error);
+        }
+      } catch (error) {
+        showResult('❌ ERROR: ' + error.message);
+      }
+    }
+
+    function showLoading(message) {
+      resultDiv.style.display = 'block';
+      resultDiv.className = 'loading';
+      resultDiv.textContent = message;
+      
+      // Disable all buttons
+      document.querySelectorAll('button').forEach(btn => btn.disabled = true);
+    }
+
+    function showResult(text) {
+      resultDiv.style.display = 'block';
+      resultDiv.className = '';
+      resultDiv.textContent = text;
+      
+      // Enable all buttons
+      document.querySelectorAll('button').forEach(btn => btn.disabled = false);
+    }
+  </script>
+</body>
+</html>

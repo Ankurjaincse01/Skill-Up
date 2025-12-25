@@ -1,0 +1,802 @@
+[
+  {
+    "id": 1,
+    "question": "Two Sum",
+    "topic": "arrays",
+    "difficulty": "Easy",
+    "article": "https://www.geeksforgeeks.org/given-an-array-a-and-a-number-x-find-pair-in-array-that-sum-to-x/",
+    "practice": "https://leetcode.com/problems/two-sum/"
+  },
+  {
+    "id": 2,
+    "question": "Best Time to Buy and Sell Stock",
+    "topic": "arrays",
+    "difficulty": "Easy",
+    "article": "https://www.geeksforgeeks.org/stock-buy-sell/",
+    "practice": "https://leetcode.com/problems/best-time-to-buy-and-sell-stock/"
+  },
+  {
+    "id": 3,
+    "question": "Contains Duplicate",
+    "topic": "arrays",
+    "difficulty": "Easy",
+    "article": "https://www.geeksforgeeks.org/find-duplicates-in-an-array/",
+    "practice": "https://leetcode.com/problems/contains-duplicate/"
+  },
+  {
+    "id": 4,
+    "question": "Product of Array Except Self",
+    "topic": "arrays",
+    "difficulty": "Medium",
+    "article": "https://www.geeksforgeeks.org/product-array-except-self/",
+    "practice": "https://leetcode.com/problems/product-of-array-except-self/"
+  },
+  {
+    "id": 5,
+    "question": "Maximum Subarray (Kadane's Algorithm)",
+    "topic": "arrays",
+    "difficulty": "Medium",
+    "article": "https://www.geeksforgeeks.org/largest-sum-contiguous-subarray/",
+    "practice": "https://leetcode.com/problems/maximum-subarray/"
+  },
+  {
+    "id": 6,
+    "question": "Maximum Product Subarray",
+    "topic": "arrays",
+    "difficulty": "Medium",
+    "article": "https://www.geeksforgeeks.org/maximum-product-subarray/",
+    "practice": "https://leetcode.com/problems/maximum-product-subarray/"
+  },
+  {
+    "id": 7,
+    "question": "Find Minimum in Rotated Sorted Array",
+    "topic": "arrays",
+    "difficulty": "Medium",
+    "article": "https://www.geeksforgeeks.org/find-minimum-element-in-a-sorted-and-rotated-array/",
+    "practice": "https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/"
+  },
+  {
+    "id": 8,
+    "question": "Search in Rotated Sorted Array",
+    "topic": "arrays",
+    "difficulty": "Medium",
+    "article": "https://www.geeksforgeeks.org/search-an-element-in-a-sorted-and-rotated-array/",
+    "practice": "https://leetcode.com/problems/search-in-rotated-sorted-array/"
+  },
+  {
+    "id": 9,
+    "question": "3Sum",
+    "topic": "arrays",
+    "difficulty": "Medium",
+    "article": "https://www.geeksforgeeks.org/find-triplet-sum/",
+    "practice": "https://leetcode.com/problems/3sum/"
+  },
+  {
+    "id": 10,
+    "question": "Container With Most Water",
+    "topic": "arrays",
+    "difficulty": "Medium",
+    "article": "https://www.geeksforgeeks.org/container-with-most-water/",
+    "practice": "https://leetcode.com/problems/container-with-most-water/"
+  },
+  {
+    "id": 11,
+    "question": "Trapping Rain Water",
+    "topic": "arrays",
+    "difficulty": "Hard",
+    "article": "https://www.geeksforgeeks.org/trapping-rain-water/",
+    "practice": "https://leetcode.com/problems/trapping-rain-water/"
+  },
+  {
+    "id": 12,
+    "question": "Merge Intervals",
+    "topic": "arrays",
+    "difficulty": "Medium",
+    "article": "https://www.geeksforgeeks.org/merge-intervals/",
+    "practice": "https://leetcode.com/problems/merge-intervals/"
+  },
+  {
+    "id": 13,
+    "question": "Insert Interval",
+    "topic": "arrays",
+    "difficulty": "Hard",
+    "article": "https://www.geeksforgeeks.org/insert-interval/",
+    "practice": "https://leetcode.com/problems/insert-interval/"
+  },
+  {
+    "id": 14,
+    "question": "Non-overlapping Intervals",
+    "topic": "arrays",
+    "difficulty": "Medium",
+    "article": "https://www.geeksforgeeks.org/non-overlapping-intervals/",
+    "practice": "https://leetcode.com/problems/non-overlapping-intervals/"
+  },
+  {
+    "id": 15,
+    "question": "Set Matrix Zeroes",
+    "topic": "arrays",
+    "difficulty": "Medium",
+    "article": "https://www.geeksforgeeks.org/set-matrix-zeroes/",
+    "practice": "https://leetcode.com/problems/set-matrix-zeroes/"
+  },
+  {
+    "id": 16,
+    "question": "Longest Substring Without Repeating Characters",
+    "topic": "strings",
+    "difficulty": "Medium",
+    "article": "https://www.geeksforgeeks.org/length-of-longest-substring-without-repeating-characters/",
+    "practice": "https://leetcode.com/problems/longest-substring-without-repeating-characters/"
+  },
+  {
+    "id": 17,
+    "question": "Longest Repeating Character Replacement",
+    "topic": "strings",
+    "difficulty": "Medium",
+    "article": "https://www.geeksforgeeks.org/longest-repeating-character-replacement/",
+    "practice": "https://leetcode.com/problems/longest-repeating-character-replacement/"
+  },
+  {
+    "id": 18,
+    "question": "Valid Anagram",
+    "topic": "strings",
+    "difficulty": "Easy",
+    "article": "https://www.geeksforgeeks.org/check-whether-two-strings-are-anagram-of-each-other/",
+    "practice": "https://leetcode.com/problems/valid-anagram/"
+  },
+  {
+    "id": 19,
+    "question": "Group Anagrams",
+    "topic": "strings",
+    "difficulty": "Medium",
+    "article": "https://www.geeksforgeeks.org/group-anagrams/",
+    "practice": "https://leetcode.com/problems/group-anagrams/"
+  },
+  {
+    "id": 20,
+    "question": "Valid Parentheses",
+    "topic": "strings",
+    "difficulty": "Easy",
+    "article": "https://www.geeksforgeeks.org/check-for-balanced-parentheses-in-an-expression/",
+    "practice": "https://leetcode.com/problems/valid-parentheses/"
+  },
+  {
+    "id": 21,
+    "question": "Valid Palindrome",
+    "topic": "strings",
+    "difficulty": "Easy",
+    "article": "https://www.geeksforgeeks.org/check-if-a-number-is-palindrome/",
+    "practice": "https://leetcode.com/problems/valid-palindrome/"
+  },
+  {
+    "id": 22,
+    "question": "Longest Palindromic Substring",
+    "topic": "strings",
+    "difficulty": "Medium",
+    "article": "https://www.geeksforgeeks.org/longest-palindromic-substring-using-dynamic-programming/",
+    "practice": "https://leetcode.com/problems/longest-palindromic-substring/"
+  },
+  {
+    "id": 23,
+    "question": "Palindromic Substrings",
+    "topic": "strings",
+    "difficulty": "Medium",
+    "article": "https://www.geeksforgeeks.org/count-palindromic-subsequences/",
+    "practice": "https://leetcode.com/problems/palindromic-substrings/"
+  },
+  {
+    "id": 24,
+    "question": "Encode and Decode Strings",
+    "topic": "strings",
+    "difficulty": "Medium",
+    "article": "https://www.geeksforgeeks.org/encode-decode/",
+    "practice": "https://leetcode.com/problems/encode-and-decode-strings/"
+  },
+  {
+    "id": 25,
+    "question": "Longest Common Prefix",
+    "topic": "strings",
+    "difficulty": "Easy",
+    "article": "https://www.geeksforgeeks.org/longest-common-prefix-word-by-word-matching/",
+    "practice": "https://leetcode.com/problems/longest-common-prefix/"
+  },
+  {
+    "id": 26,
+    "question": "Minimum Window Substring",
+    "topic": "strings",
+    "difficulty": "Hard",
+    "article": "https://www.geeksforgeeks.org/minimum-window-subsequence/",
+    "practice": "https://leetcode.com/problems/minimum-window-substring/"
+  },
+  {
+    "id": 27,
+    "question": "String to Integer (atoi)",
+    "topic": "strings",
+    "difficulty": "Medium",
+    "article": "https://www.geeksforgeeks.org/string-to-integer-atoi/",
+    "practice": "https://leetcode.com/problems/string-to-integer-atoi/"
+  },
+  {
+    "id": 28,
+    "question": "Reverse a Linked List",
+    "topic": "linked-list",
+    "difficulty": "Easy",
+    "article": "https://www.geeksforgeeks.org/reverse-a-linked-list/",
+    "practice": "https://leetcode.com/problems/reverse-linked-list/"
+  },
+  {
+    "id": 29,
+    "question": "Detect Cycle in a Linked List",
+    "topic": "linked-list",
+    "difficulty": "Easy",
+    "article": "https://www.geeksforgeeks.org/detect-loop-in-a-linked-list/",
+    "practice": "https://leetcode.com/problems/linked-list-cycle/"
+  },
+  {
+    "id": 30,
+    "question": "Merge Two Sorted Lists",
+    "topic": "linked-list",
+    "difficulty": "Easy",
+    "article": "https://www.geeksforgeeks.org/merge-two-sorted-linked-lists/",
+    "practice": "https://leetcode.com/problems/merge-two-sorted-lists/"
+  },
+  {
+    "id": 31,
+    "question": "Merge k Sorted Lists",
+    "topic": "linked-list",
+    "difficulty": "Hard",
+    "article": "https://www.geeksforgeeks.org/merge-k-sorted-linked-lists/",
+    "practice": "https://leetcode.com/problems/merge-k-sorted-lists/"
+  },
+  {
+    "id": 32,
+    "question": "Remove Nth Node From End of List",
+    "topic": "linked-list",
+    "difficulty": "Medium",
+    "article": "https://www.geeksforgeeks.org/remove-nth-node-from-end-of-list/",
+    "practice": "https://leetcode.com/problems/remove-nth-node-from-end-of-list/"
+  },
+  {
+    "id": 33,
+    "question": "Reorder List",
+    "topic": "linked-list",
+    "difficulty": "Medium",
+    "article": "https://www.geeksforgeeks.org/reorder-list/",
+    "practice": "https://leetcode.com/problems/reorder-list/"
+  },
+  {
+    "id": 34,
+    "question": "Linked List Cycle II",
+    "topic": "linked-list",
+    "difficulty": "Medium",
+    "article": "https://www.geeksforgeeks.org/detect-loop-in-linked-list/",
+    "practice": "https://leetcode.com/problems/linked-list-cycle-ii/"
+  },
+  {
+    "id": 35,
+    "question": "Add Two Numbers",
+    "topic": "linked-list",
+    "difficulty": "Medium",
+    "article": "https://www.geeksforgeeks.org/add-two-numbers-represented-by-linked-lists/",
+    "practice": "https://leetcode.com/problems/add-two-numbers/"
+  },
+  {
+    "id": 36,
+    "question": "Copy List with Random Pointer",
+    "topic": "linked-list",
+    "difficulty": "Medium",
+    "article": "https://www.geeksforgeeks.org/copy-list-with-random-pointer/",
+    "practice": "https://leetcode.com/problems/copy-list-with-random-pointer/"
+  },
+  {
+    "id": 37,
+    "question": "Intersection of Two Linked Lists",
+    "topic": "linked-list",
+    "difficulty": "Easy",
+    "article": "https://www.geeksforgeeks.org/intersection-point-of-two-linked-lists/",
+    "practice": "https://leetcode.com/problems/intersection-of-two-linked-lists/"
+  },
+  {
+    "id": 38,
+    "question": "LRU Cache",
+    "topic": "linked-list",
+    "difficulty": "Hard",
+    "article": "https://www.geeksforgeeks.org/lru-cache-implementation/",
+    "practice": "https://leetcode.com/problems/lru-cache/"
+  },
+  {
+    "id": 39,
+    "question": "Sort List",
+    "topic": "linked-list",
+    "difficulty": "Medium",
+    "article": "https://www.geeksforgeeks.org/merge-sort-for-linked-list/",
+    "practice": "https://leetcode.com/problems/sort-list/"
+  },
+  {
+    "id": 40,
+    "question": "Maximum Depth of Binary Tree",
+    "topic": "trees",
+    "difficulty": "Easy",
+    "article": "https://www.geeksforgeeks.org/maximum-depth-of-binary-tree/",
+    "practice": "https://leetcode.com/problems/maximum-depth-of-binary-tree/"
+  },
+  {
+    "id": 41,
+    "question": "Same Tree",
+    "topic": "trees",
+    "difficulty": "Easy",
+    "article": "https://www.geeksforgeeks.org/check-if-two-trees-are-identical/",
+    "practice": "https://leetcode.com/problems/same-tree/"
+  },
+  {
+    "id": 42,
+    "question": "Invert Binary Tree",
+    "topic": "trees",
+    "difficulty": "Easy",
+    "article": "https://www.geeksforgeeks.org/invert-binary-tree/",
+    "practice": "https://leetcode.com/problems/invert-binary-tree/"
+  },
+  {
+    "id": 43,
+    "question": "Binary Tree Maximum Path Sum",
+    "topic": "trees",
+    "difficulty": "Hard",
+    "article": "https://www.geeksforgeeks.org/binary-tree-maximum-path-sum/",
+    "practice": "https://leetcode.com/problems/binary-tree-maximum-path-sum/"
+  },
+  {
+    "id": 44,
+    "question": "Binary Tree Level Order Traversal",
+    "topic": "trees",
+    "difficulty": "Medium",
+    "article": "https://www.geeksforgeeks.org/level-order-traversal-in-reverse/",
+    "practice": "https://leetcode.com/problems/binary-tree-level-order-traversal/"
+  },
+  {
+    "id": 45,
+    "question": "Serialize and Deserialize Binary Tree",
+    "topic": "trees",
+    "difficulty": "Hard",
+    "article": "https://www.geeksforgeeks.org/serialize-deserialize-binary-tree/",
+    "practice": "https://leetcode.com/problems/serialize-and-deserialize-binary-tree/"
+  },
+  {
+    "id": 46,
+    "question": "Subtree of Another Tree",
+    "topic": "trees",
+    "difficulty": "Easy",
+    "article": "https://www.geeksforgeeks.org/check-if-a-binary-tree-is-subtree-of-another-binary-tree/",
+    "practice": "https://leetcode.com/problems/subtree-of-another-tree/"
+  },
+  {
+    "id": 47,
+    "question": "Construct Binary Tree from Preorder and Inorder",
+    "topic": "trees",
+    "difficulty": "Medium",
+    "article": "https://www.geeksforgeeks.org/construct-tree-from-given-inorder-and-preorder-traversals/",
+    "practice": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/"
+  },
+  {
+    "id": 48,
+    "question": "Validate Binary Search Tree",
+    "topic": "trees",
+    "difficulty": "Medium",
+    "article": "https://www.geeksforgeeks.org/a-program-to-check-if-a-binary-tree-is-bst-or-not/",
+    "practice": "https://leetcode.com/problems/validate-binary-search-tree/"
+  },
+  {
+    "id": 49,
+    "question": "Kth Smallest Element in a BST",
+    "topic": "trees",
+    "difficulty": "Medium",
+    "article": "https://www.geeksforgeeks.org/find-k-th-smallest-element-in-bst/",
+    "practice": "https://leetcode.com/problems/kth-smallest-element-in-a-bst/"
+  },
+  {
+    "id": 50,
+    "question": "Lowest Common Ancestor of a BST",
+    "topic": "trees",
+    "difficulty": "Easy",
+    "article": "https://www.geeksforgeeks.org/lowest-common-ancestor-in-a-binary-search-tree/",
+    "practice": "https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/"
+  },
+  {
+    "id": 51,
+    "question": "Lowest Common Ancestor of a Binary Tree",
+    "topic": "trees",
+    "difficulty": "Medium",
+    "article": "https://www.geeksforgeeks.org/lowest-common-ancestor-in-a-binary-tree/",
+    "practice": "https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/"
+  },
+  {
+    "id": 52,
+    "question": "Binary Tree Right Side View",
+    "topic": "trees",
+    "difficulty": "Medium",
+    "article": "https://www.geeksforgeeks.org/print-right-view-binary-tree/",
+    "practice": "https://leetcode.com/problems/binary-tree-right-side-view/"
+  },
+  {
+    "id": 53,
+    "question": "Diameter of Binary Tree",
+    "topic": "trees",
+    "difficulty": "Easy",
+    "article": "https://www.geeksforgeeks.org/diameter-of-binary-tree/",
+    "practice": "https://leetcode.com/problems/diameter-of-binary-tree/"
+  },
+  {
+    "id": 54,
+    "question": "Balanced Binary Tree",
+    "topic": "trees",
+    "difficulty": "Easy",
+    "article": "https://www.geeksforgeeks.org/how-to-determine-if-a-binary-tree-is-balanced/",
+    "practice": "https://leetcode.com/problems/balanced-binary-tree/"
+  },
+  {
+    "id": 55,
+    "question": "Number of Islands",
+    "topic": "graphs",
+    "difficulty": "Medium",
+    "article": "https://www.geeksforgeeks.org/find-number-of-islands/",
+    "practice": "https://leetcode.com/problems/number-of-islands/"
+  },
+  {
+    "id": 56,
+    "question": "Clone Graph",
+    "topic": "graphs",
+    "difficulty": "Medium",
+    "article": "https://www.geeksforgeeks.org/clone-graph/",
+    "practice": "https://leetcode.com/problems/clone-graph/"
+  },
+  {
+    "id": 57,
+    "question": "Course Schedule",
+    "topic": "graphs",
+    "difficulty": "Medium",
+    "article": "https://www.geeksforgeeks.org/course-schedule-topological-sort/",
+    "practice": "https://leetcode.com/problems/course-schedule/"
+  },
+  {
+    "id": 58,
+    "question": "Pacific Atlantic Water Flow",
+    "topic": "graphs",
+    "difficulty": "Medium",
+    "article": "https://www.geeksforgeeks.org/pacific-atlantic-water-flow/",
+    "practice": "https://leetcode.com/problems/pacific-atlantic-water-flow/"
+  },
+  {
+    "id": 59,
+    "question": "Longest Consecutive Sequence",
+    "topic": "graphs",
+    "difficulty": "Hard",
+    "article": "https://www.geeksforgeeks.org/longest-consecutive-subsequence/",
+    "practice": "https://leetcode.com/problems/longest-consecutive/"
+  },
+  {
+    "id": 60,
+    "question": "Alien Dictionary",
+    "topic": "graphs",
+    "difficulty": "Hard",
+    "article": "https://www.geeksforgeeks.org/alien-dictionary/",
+    "practice": "https://leetcode.com/problems/alien-dictionary/"
+  },
+  {
+    "id": 61,
+    "question": "Graph Valid Tree",
+    "topic": "graphs",
+    "difficulty": "Medium",
+    "article": "https://www.geeksforgeeks.org/check-if-graph-is-tree/",
+    "practice": "https://leetcode.com/problems/graph-valid-tree/"
+  },
+  {
+    "id": 62,
+    "question": "Number of Connected Components",
+    "topic": "graphs",
+    "difficulty": "Medium",
+    "article": "https://www.geeksforgeeks.org/find-number-of-connected-components-in-a-graph/",
+    "practice": "https://leetcode.com/problems/number-of-connected-components-in-an-undirected-graph/"
+  },
+  {
+    "id": 63,
+    "question": "Word Ladder",
+    "topic": "graphs",
+    "difficulty": "Hard",
+    "article": "https://www.geeksforgeeks.org/word-ladder/",
+    "practice": "https://leetcode.com/problems/word-ladder/"
+  },
+  {
+    "id": 64,
+    "question": "Course Schedule II",
+    "topic": "graphs",
+    "difficulty": "Medium",
+    "article": "https://www.geeksforgeeks.org/course-schedule-ii-topological-sort/",
+    "practice": "https://leetcode.com/problems/course-schedule-ii/"
+  },
+  {
+    "id": 65,
+    "question": "Rotting Oranges",
+    "topic": "graphs",
+    "difficulty": "Medium",
+    "article": "https://www.geeksforgeeks.org/rotting-oranges/",
+    "practice": "https://leetcode.com/problems/rotting-oranges/"
+  },
+  {
+    "id": 66,
+    "question": "Cheapest Flights Within K Stops",
+    "topic": "graphs",
+    "difficulty": "Medium",
+    "article": "https://www.geeksforgeeks.org/cheapest-flights-within-k-stops/",
+    "practice": "https://leetcode.com/problems/cheapest-flights-within-k-stops/"
+  },
+  {
+    "id": 67,
+    "question": "Climbing Stairs",
+    "topic": "dp",
+    "difficulty": "Easy",
+    "article": "https://www.geeksforgeeks.org/climbing-stairs/",
+    "practice": "https://leetcode.com/problems/climbing-stairs/"
+  },
+  {
+    "id": 68,
+    "question": "Coin Change",
+    "topic": "dp",
+    "difficulty": "Medium",
+    "article": "https://www.geeksforgeeks.org/coin-change-problem-dynamic-programming/",
+    "practice": "https://leetcode.com/problems/coin-change/"
+  },
+  {
+    "id": 69,
+    "question": "Longest Increasing Subsequence",
+    "topic": "dp",
+    "difficulty": "Medium",
+    "article": "https://www.geeksforgeeks.org/longest-increasing-subsequence-dp-3/",
+    "practice": "https://leetcode.com/problems/longest-increasing-subsequence/"
+  },
+  {
+    "id": 70,
+    "question": "Longest Common Subsequence",
+    "topic": "dp",
+    "difficulty": "Medium",
+    "article": "https://www.geeksforgeeks.org/longest-common-subsequence-dp-4/",
+    "practice": "https://leetcode.com/problems/longest-common-subsequence/"
+  },
+  {
+    "id": 71,
+    "question": "Word Break Problem",
+    "topic": "dp",
+    "difficulty": "Medium",
+    "article": "https://www.geeksforgeeks.org/word-break-problem-dp-32/",
+    "practice": "https://leetcode.com/problems/word-break/"
+  },
+  {
+    "id": 72,
+    "question": "Combination Sum",
+    "topic": "dp",
+    "difficulty": "Medium",
+    "article": "https://www.geeksforgeeks.org/combination-sum/",
+    "practice": "https://leetcode.com/problems/combination-sum/"
+  },
+  {
+    "id": 73,
+    "question": "House Robber",
+    "topic": "dp",
+    "difficulty": "Medium",
+    "article": "https://www.geeksforgeeks.org/house-robber/",
+    "practice": "https://leetcode.com/problems/house-robber/"
+  },
+  {
+    "id": 74,
+    "question": "House Robber II",
+    "topic": "dp",
+    "difficulty": "Medium",
+    "article": "https://www.geeksforgeeks.org/house-robber-ii/",
+    "practice": "https://leetcode.com/problems/house-robber-ii/"
+  },
+  {
+    "id": 75,
+    "question": "Decode Ways",
+    "topic": "dp",
+    "difficulty": "Medium",
+    "article": "https://www.geeksforgeeks.org/decode-ways/",
+    "practice": "https://leetcode.com/problems/decode-ways/"
+  },
+  {
+    "id": 76,
+    "question": "Unique Paths",
+    "topic": "dp",
+    "difficulty": "Medium",
+    "article": "https://www.geeksforgeeks.org/unique-paths-in-grid/",
+    "practice": "https://leetcode.com/problems/unique-paths/"
+  },
+  {
+    "id": 77,
+    "question": "Jump Game",
+    "topic": "dp",
+    "difficulty": "Medium",
+    "article": "https://www.geeksforgeeks.org/jump-game/",
+    "practice": "https://leetcode.com/problems/jump-game/"
+  },
+  {
+    "id": 78,
+    "question": "0/1 Knapsack",
+    "topic": "dp",
+    "difficulty": "Medium",
+    "article": "https://www.geeksforgeeks.org/0-1-knapsack-problem-dp-10/",
+    "practice": "https://leetcode.com/problems/0-1-knapsack/"
+  },
+  {
+    "id": 79,
+    "question": "Edit Distance",
+    "topic": "dp",
+    "difficulty": "Medium",
+    "article": "https://www.geeksforgeeks.org/edit-distance-dp-5/",
+    "practice": "https://leetcode.com/problems/edit-distance/"
+  },
+  {
+    "id": 80,
+    "question": "Partition Equal Subset Sum",
+    "topic": "dp",
+    "difficulty": "Medium",
+    "article": "https://www.geeksforgeeks.org/partition-equal-subset-sum/",
+    "practice": "https://leetcode.com/problems/partition-equal-subset-sum/"
+  },
+  {
+    "id": 81,
+    "question": "Burst Balloons",
+    "topic": "dp",
+    "difficulty": "Hard",
+    "article": "https://www.geeksforgeeks.org/burst-balloons/",
+    "practice": "https://leetcode.com/problems/burst-balloons/"
+  },
+  {
+    "id": 82,
+    "question": "Subsets",
+    "topic": "backtracking",
+    "difficulty": "Medium",
+    "article": "https://www.geeksforgeeks.org/print-all-subsets-of-an-array/",
+    "practice": "https://leetcode.com/problems/subsets/"
+  },
+  {
+    "id": 83,
+    "question": "Permutations",
+    "topic": "backtracking",
+    "difficulty": "Medium",
+    "article": "https://www.geeksforgeeks.org/write-a-c-program-to-print-all-permutations-of-a-given-string/",
+    "practice": "https://leetcode.com/problems/permutations/"
+  },
+  {
+    "id": 84,
+    "question": "Combination Sum II",
+    "topic": "backtracking",
+    "difficulty": "Medium",
+    "article": "https://www.geeksforgeeks.org/combination-sum-ii/",
+    "practice": "https://leetcode.com/problems/combination-sum-ii/"
+  },
+  {
+    "id": 85,
+    "question": "Word Search",
+    "topic": "backtracking",
+    "difficulty": "Medium",
+    "article": "https://www.geeksforgeeks.org/word-search-in-matrix/",
+    "practice": "https://leetcode.com/problems/word-search/"
+  },
+  {
+    "id": 86,
+    "question": "N-Queens",
+    "topic": "backtracking",
+    "difficulty": "Hard",
+    "article": "https://www.geeksforgeeks.org/n-queen-problem-backtracking-3/",
+    "practice": "https://leetcode.com/problems/n-queens/"
+  },
+  {
+    "id": 87,
+    "question": "Sudoku Solver",
+    "topic": "backtracking",
+    "difficulty": "Hard",
+    "article": "https://www.geeksforgeeks.org/sudoku-backtracking-7/",
+    "practice": "https://leetcode.com/problems/sudoku-solver/"
+  },
+  {
+    "id": 88,
+    "question": "Letter Combinations of a Phone Number",
+    "topic": "backtracking",
+    "difficulty": "Medium",
+    "article": "https://www.geeksforgeeks.org/letter-combinations-phone-number/",
+    "practice": "https://leetcode.com/problems/letter-combinations-of-a-phone-number/"
+  },
+  {
+    "id": 89,
+    "question": "Palindromic Partitioning",
+    "topic": "backtracking",
+    "difficulty": "Medium",
+    "article": "https://www.geeksforgeeks.org/partition-of-a-set-into-k-subsets/",
+    "practice": "https://leetcode.com/problems/palindrome-partitioning/"
+  },
+  {
+    "id": 90,
+    "question": "Top K Frequent Elements",
+    "topic": "heap",
+    "difficulty": "Medium",
+    "article": "https://www.geeksforgeeks.org/top-k-frequent-elements/",
+    "practice": "https://leetcode.com/problems/top-k-frequent-elements/"
+  },
+  {
+    "id": 91,
+    "question": "Find Median from Data Stream",
+    "topic": "heap",
+    "difficulty": "Hard",
+    "article": "https://www.geeksforgeeks.org/find-median-from-data-stream/",
+    "practice": "https://leetcode.com/problems/find-median-from-data-stream/"
+  },
+  {
+    "id": 92,
+    "question": "Merge K Sorted Lists (Heap Version)",
+    "topic": "heap",
+    "difficulty": "Hard",
+    "article": "https://www.geeksforgeeks.org/merge-k-sorted-lists/",
+    "practice": "https://leetcode.com/problems/merge-k-sorted-lists/"
+  },
+  {
+    "id": 93,
+    "question": "Kth Largest Element in an Array",
+    "topic": "heap",
+    "difficulty": "Medium",
+    "article": "https://www.geeksforgeeks.org/kth-largest-element-in-an-array/",
+    "practice": "https://leetcode.com/problems/kth-largest-element-in-an-array/"
+  },
+  {
+    "id": 94,
+    "question": "Task Scheduler",
+    "topic": "heap",
+    "difficulty": "Medium",
+    "article": "https://www.geeksforgeeks.org/task-scheduler/",
+    "practice": "https://leetcode.com/problems/task-scheduler/"
+  },
+  {
+    "id": 95,
+    "question": "Smallest Range Covering Elements from K Lists",
+    "topic": "heap",
+    "difficulty": "Hard",
+    "article": "https://www.geeksforgeeks.org/smallest-range-covering-elements-from-k-lists/",
+    "practice": "https://leetcode.com/problems/smallest-range-covering-elements-from-k-lists/"
+  },
+  {
+    "id": 96,
+    "question": "Sliding Window Maximum",
+    "topic": "sliding-window",
+    "difficulty": "Hard",
+    "article": "https://www.geeksforgeeks.org/sliding-window-maximum-maximum-of-all-subarrays-of-size-k/",
+    "practice": "https://leetcode.com/problems/sliding-window-maximum/"
+  },
+  {
+    "id": 97,
+    "question": "Minimum Size Subarray Sum",
+    "topic": "sliding-window",
+    "difficulty": "Medium",
+    "article": "https://www.geeksforgeeks.org/minimum-size-subarray-sum/",
+    "practice": "https://leetcode.com/problems/minimum-size-subarray-sum/"
+  },
+  {
+    "id": 98,
+    "question": "Find All Anagrams in a String",
+    "topic": "sliding-window",
+    "difficulty": "Medium",
+    "article": "https://www.geeksforgeeks.org/find-all-anagrams-of-a-pattern-in-text/",
+    "practice": "https://leetcode.com/problems/find-all-anagrams-in-a-string/"
+  },
+  {
+    "id": 99,
+    "question": "Subarrays with K Different Integers",
+    "topic": "sliding-window",
+    "difficulty": "Hard",
+    "article": "https://www.geeksforgeeks.org/subarrays-with-k-different-integers/",
+    "practice": "https://leetcode.com/problems/subarrays-with-k-different-integers/"
+  },
+  {
+    "id": 100,
+    "question": "Sort Colors (Dutch National Flag)",
+    "topic": "sliding-window",
+    "difficulty": "Medium",
+    "article": "https://www.geeksforgeeks.org/sort-array-of-0s-1s-and-2s/",
+    "practice": "https://leetcode.com/problems/sort-colors/"
+  }
+]

@@ -1,0 +1,174 @@
+<%- include('partials/header') %>
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+  <div class="container-fluid px-4">
+    <a class="navbar-brand d-flex align-items-center" href="/dashboard">
+      <div class="logo-icon">
+        <i class="fas fa-code"></i>
+      </div>
+      <span class="ms-2 fw-bold">Skill Up</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="prepareDropdown" role="button" data-bs-toggle="dropdown">
+            Prepare
+          </a>
+          <ul class="dropdown-menu">
+            <li><h6 class="dropdown-header">Core CS Concepts</h6></li>
+            <li><a class="dropdown-item" href="/prepare/data-structures">Data Structures</a></li>
+            <li><a class="dropdown-item" href="/prepare/algorithms">Algorithms</a></li>
+          </ul>
+        </li>
+      </ul>
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" id="userDropdown" role="button" data-bs-toggle="dropdown">
+            <div class="user-avatar-circle">
+              <%= userName ? userName.charAt(0).toUpperCase() : 'U' %>
+            </div>
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li><a class="dropdown-item" href="/profile"><i class="fas fa-user me-2"></i>Profile</a></li>
+            <li><a class="dropdown-item" href="/logout"><i class="fas fa-sign-out-alt me-2"></i>Logout</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- DSA Questions Section -->
+<section class="question-bank-section" style="padding-top: 5rem; padding-bottom: 3rem;">
+  <div class="container">
+
+    <!-- DSA Questions Section -->
+    <div class="text-center mb-5 mt-5">
+      <h2 class="section-title" style="font-size: 2.5rem; font-weight: 700; color: #8b9cff; margin-bottom: 1rem;">Top 100 Most Asked DSA Questions</h2>
+      <p style="color: #a0a8c0; font-size: 1.1rem; margin-bottom: 3rem;">Master these curated questions to ace your coding interviews</p>
+    </div>
+
+    <div class="table-responsive">
+      <table class="table table-dark table-hover" style="background: #1a1f35; border-radius: 12px; overflow: hidden;">
+        <thead style="background: rgba(91, 110, 247, 0.15); border-bottom: 2px solid rgba(91, 110, 247, 0.3);">
+          <tr>
+            <th style="padding: 1.25rem 1.5rem; color: #fff; font-weight: 700; font-size: 1rem;">QUESTION</th>
+            <th style="padding: 1.25rem 1.5rem; color: #fff; font-weight: 700; font-size: 1rem;">ARTICLE</th>
+          </tr>
+        </thead>
+        <tbody id="dsaQuestionsTable">
+          <!-- Questions will be loaded here dynamically -->
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+</section>
+
+<script>
+// Load DSA Questions
+async function loadDSAQuestions() {
+  try {
+    const response = await fetch('/api/dsa-questions');
+    const questions = await response.json();
+    
+    const tableBody = document.getElementById('dsaQuestionsTable');
+    tableBody.innerHTML = '';
+    
+    // Topic headers mapping
+    const topicHeaders = {
+      'arrays': { title: '1. Arrays', count: 0 },
+      'strings': { title: '2. Strings', count: 0 },
+      'linked-list': { title: '3. Linked List', count: 0 },
+      'trees': { title: '4. Binary Trees & BST', count: 0 },
+      'graphs': { title: '5. Graphs', count: 0 },
+      'dp': { title: '6. Dynamic Programming', count: 0 },
+      'backtracking': { title: '7. Backtracking', count: 0 },
+      'heap': { title: '8. Heap / Priority Queue', count: 0 },
+      'sliding-window': { title: '9. Sliding Window & Two Pointers', count: 0 }
+    };
+    
+    let currentTopic = '';
+    
+    // Display all 100 questions grouped by topic
+    questions.forEach((q, index) => {
+      // Add topic header when topic changes
+      if (q.topic !== currentTopic) {
+        currentTopic = q.topic;
+        const headerRow = document.createElement('tr');
+        headerRow.style.background = 'rgba(91, 110, 247, 0.2)';
+        headerRow.innerHTML = `
+          <td colspan="2" style="padding: 1rem 1.5rem; color: #fff; font-weight: 700; font-size: 1.1rem;">
+            ${topicHeaders[q.topic]?.title || q.topic}
+          </td>
+        `;
+        tableBody.appendChild(headerRow);
+      }
+      
+      const row = document.createElement('tr');
+      row.style.borderBottom = '1px solid rgba(91, 110, 247, 0.1)';
+      row.style.transition = 'all 0.2s ease';
+      row.onmouseover = function() {
+        this.style.background = 'rgba(91, 110, 247, 0.1)';
+      };
+      row.onmouseout = function() {
+        this.style.background = 'transparent';
+      };
+      row.innerHTML = `
+        <td style="padding: 1.25rem 1.5rem; color: #a0a8c0;">${q.question}</td>
+        <td style="padding: 1.25rem 1.5rem;">
+          <a href="${q.article}" target="_blank" class="btn btn-sm" style="background: #6366f1; color: white; border: none; padding: 0.5rem 1rem; border-radius: 6px; font-weight: 500; text-decoration: none;">Link</a>
+        </td>
+      `;
+      tableBody.appendChild(row);
+    });
+  } catch (error) {
+    console.error('Error loading DSA questions:', error);
+  }
+}
+
+// Load questions when page loads
+document.addEventListener('DOMContentLoaded', loadDSAQuestions);
+</script>
+
+<style>
+  body {
+    padding-top: 60px;
+  }
+
+  .question-bank-section {
+    padding: 0 2rem 4rem 2rem;
+  }
+
+  /* User Avatar */
+  .user-avatar-circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 600;
+    font-size: 1.1rem;
+  }
+
+  /* Logo */
+  .logo-icon {
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+  }
+</style>
+
+<%- include('partials/footer') %>

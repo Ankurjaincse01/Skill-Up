@@ -1,0 +1,482 @@
+[
+  {
+    "id": 1,
+    "question": "What is the Virtual DOM and how does React use it?",
+    "topic": "React",
+    "difficulty": "Medium",
+    "article": "https://www.geeksforgeeks.org/reactjs-virtual-dom/",
+    "practice": "https://react.dev/learn/preserving-and-resetting-state"
+  },
+  {
+    "id": 2,
+    "question": "Explain the difference between let, const, and var in JavaScript",
+    "topic": "JavaScript",
+    "difficulty": "Easy",
+    "article": "https://www.geeksforgeeks.org/difference-between-var-let-and-const-keywords-in-javascript/",
+    "practice": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let"
+  },
+  {
+    "id": 3,
+    "question": "What are JavaScript Closures and provide a practical example?",
+    "topic": "JavaScript",
+    "difficulty": "Medium",
+    "article": "https://www.geeksforgeeks.org/closures-in-javascript/",
+    "practice": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures"
+  },
+  {
+    "id": 4,
+    "question": "Explain event bubbling and event capturing in JavaScript",
+    "topic": "JavaScript",
+    "difficulty": "Medium",
+    "article": "https://www.geeksforgeeks.org/event-bubbling-in-javascript/",
+    "practice": "https://javascript.info/bubbling-and-capturing"
+  },
+  {
+    "id": 5,
+    "question": "What is the difference between '==' and '===' in JavaScript?",
+    "topic": "JavaScript",
+    "difficulty": "Easy",
+    "article": "https://www.geeksforgeeks.org/difference-between-and-operator-in-javascript/",
+    "practice": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness"
+  },
+  {
+    "id": 6,
+    "question": "Explain CSS Flexbox and its main properties",
+    "topic": "CSS",
+    "difficulty": "Easy",
+    "article": "https://www.geeksforgeeks.org/css-flexbox-and-its-properties/",
+    "practice": "https://css-tricks.com/snippets/css/a-guide-to-flexbox/"
+  },
+  {
+    "id": 7,
+    "question": "What is CSS Grid and when would you use it over Flexbox?",
+    "topic": "CSS",
+    "difficulty": "Medium",
+    "article": "https://www.geeksforgeeks.org/css-grid-layout/",
+    "practice": "https://css-tricks.com/snippets/css/complete-guide-grid/"
+  },
+  {
+    "id": 8,
+    "question": "Explain the concept of React Hooks (useState, useEffect, useContext)",
+    "topic": "React",
+    "difficulty": "Medium",
+    "article": "https://www.geeksforgeeks.org/reactjs-hooks/",
+    "practice": "https://react.dev/reference/react"
+  },
+  {
+    "id": 9,
+    "question": "What is the difference between props and state in React?",
+    "topic": "React",
+    "difficulty": "Easy",
+    "article": "https://www.geeksforgeeks.org/reactjs-state-vs-props/",
+    "practice": "https://react.dev/learn/passing-props-to-a-component"
+  },
+  {
+    "id": 10,
+    "question": "Explain JavaScript Promises and async/await",
+    "topic": "JavaScript",
+    "difficulty": "Medium",
+    "article": "https://www.geeksforgeeks.org/javascript-promises/",
+    "practice": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise"
+  },
+  {
+    "id": 11,
+    "question": "What are JavaScript Arrow Functions and how do they differ from regular functions?",
+    "topic": "JavaScript",
+    "difficulty": "Easy",
+    "article": "https://www.geeksforgeeks.org/arrow-functions-in-javascript/",
+    "practice": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions"
+  },
+  {
+    "id": 12,
+    "question": "Explain the 'this' keyword in JavaScript",
+    "topic": "JavaScript",
+    "difficulty": "Medium",
+    "article": "https://www.geeksforgeeks.org/this-in-javascript/",
+    "practice": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this"
+  },
+  {
+    "id": 13,
+    "question": "What is the box model in CSS?",
+    "topic": "CSS",
+    "difficulty": "Easy",
+    "article": "https://www.geeksforgeeks.org/css-box-model/",
+    "practice": "https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model"
+  },
+  {
+    "id": 14,
+    "question": "Explain CSS positioning (static, relative, absolute, fixed, sticky)",
+    "topic": "CSS",
+    "difficulty": "Medium",
+    "article": "https://www.geeksforgeeks.org/css-positioning/",
+    "practice": "https://css-tricks.com/almanac/properties/p/position/"
+  },
+  {
+    "id": 15,
+    "question": "What are semantic HTML tags and why are they important?",
+    "topic": "HTML",
+    "difficulty": "Easy",
+    "article": "https://www.geeksforgeeks.org/html-semantics/",
+    "practice": "https://developer.mozilla.org/en-US/docs/Glossary/Semantics"
+  },
+  {
+    "id": 16,
+    "question": "Explain the difference between null and undefined in JavaScript",
+    "topic": "JavaScript",
+    "difficulty": "Easy",
+    "article": "https://www.geeksforgeeks.org/undefined-vs-null-in-javascript/",
+    "practice": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null"
+  },
+  {
+    "id": 17,
+    "question": "What is React Context API and when would you use it?",
+    "topic": "React",
+    "difficulty": "Medium",
+    "article": "https://www.geeksforgeeks.org/context-api-in-react/",
+    "practice": "https://react.dev/learn/passing-data-deeply-with-context"
+  },
+  {
+    "id": 18,
+    "question": "Explain JavaScript prototype and prototype chain",
+    "topic": "JavaScript",
+    "difficulty": "Hard",
+    "article": "https://www.geeksforgeeks.org/prototype-in-javascript/",
+    "practice": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain"
+  },
+  {
+    "id": 19,
+    "question": "What is the difference between localStorage, sessionStorage, and cookies?",
+    "topic": "JavaScript",
+    "difficulty": "Medium",
+    "article": "https://www.geeksforgeeks.org/difference-between-local-storage-session-storage-and-cookies/",
+    "practice": "https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API"
+  },
+  {
+    "id": 20,
+    "question": "Explain CSS specificity and how it works",
+    "topic": "CSS",
+    "difficulty": "Medium",
+    "article": "https://www.geeksforgeeks.org/css-specificity/",
+    "practice": "https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity"
+  },
+  {
+    "id": 21,
+    "question": "What are higher-order functions in JavaScript?",
+    "topic": "JavaScript",
+    "difficulty": "Medium",
+    "article": "https://www.geeksforgeeks.org/higher-order-functions-in-javascript/",
+    "practice": "https://eloquentjavascript.net/05_higher_order.html"
+  },
+  {
+    "id": 22,
+    "question": "Explain the concept of React component lifecycle methods",
+    "topic": "React",
+    "difficulty": "Medium",
+    "article": "https://www.geeksforgeeks.org/reactjs-lifecycle-components/",
+    "practice": "https://react.dev/reference/react/Component"
+  },
+  {
+    "id": 23,
+    "question": "What is debouncing and throttling in JavaScript?",
+    "topic": "JavaScript",
+    "difficulty": "Medium",
+    "article": "https://www.geeksforgeeks.org/debouncing-in-javascript/",
+    "practice": "https://css-tricks.com/debouncing-throttling-explained-examples/"
+  },
+  {
+    "id": 24,
+    "question": "Explain the difference between synchronous and asynchronous JavaScript",
+    "topic": "JavaScript",
+    "difficulty": "Easy",
+    "article": "https://www.geeksforgeeks.org/synchronous-and-asynchronous-in-javascript/",
+    "practice": "https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous"
+  },
+  {
+    "id": 25,
+    "question": "What is CORS and how do you handle it?",
+    "topic": "JavaScript",
+    "difficulty": "Medium",
+    "article": "https://www.geeksforgeeks.org/cross-origin-resource-sharing-cors/",
+    "practice": "https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS"
+  },
+  {
+    "id": 26,
+    "question": "Explain CSS animations vs transitions",
+    "topic": "CSS",
+    "difficulty": "Medium",
+    "article": "https://www.geeksforgeeks.org/css-animations-vs-css-transitions/",
+    "practice": "https://css-tricks.com/almanac/properties/a/animation/"
+  },
+  {
+    "id": 27,
+    "question": "What are Web APIs and how do you use the Fetch API?",
+    "topic": "JavaScript",
+    "difficulty": "Easy",
+    "article": "https://www.geeksforgeeks.org/fetch-api/",
+    "practice": "https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API"
+  },
+  {
+    "id": 28,
+    "question": "Explain the concept of Redux and its core principles",
+    "topic": "React",
+    "difficulty": "Hard",
+    "article": "https://www.geeksforgeeks.org/introduction-to-redux/",
+    "practice": "https://redux.js.org/tutorials/essentials/part-1-overview-concepts"
+  },
+  {
+    "id": 29,
+    "question": "What is the difference between controlled and uncontrolled components in React?",
+    "topic": "React",
+    "difficulty": "Medium",
+    "article": "https://www.geeksforgeeks.org/controlled-vs-uncontrolled-components-in-reactjs/",
+    "practice": "https://react.dev/learn/sharing-state-between-components"
+  },
+  {
+    "id": 30,
+    "question": "Explain JavaScript destructuring for objects and arrays",
+    "topic": "JavaScript",
+    "difficulty": "Easy",
+    "article": "https://www.geeksforgeeks.org/destructuring-assignment-in-javascript/",
+    "practice": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment"
+  },
+  {
+    "id": 31,
+    "question": "What is the spread operator and rest parameters in JavaScript?",
+    "topic": "JavaScript",
+    "difficulty": "Easy",
+    "article": "https://www.geeksforgeeks.org/javascript-spread-operator/",
+    "practice": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax"
+  },
+  {
+    "id": 32,
+    "question": "Explain responsive design and media queries in CSS",
+    "topic": "CSS",
+    "difficulty": "Easy",
+    "article": "https://www.geeksforgeeks.org/css-media-queries/",
+    "practice": "https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries"
+  },
+  {
+    "id": 33,
+    "question": "What is React Router and how does it work?",
+    "topic": "React",
+    "difficulty": "Medium",
+    "article": "https://www.geeksforgeeks.org/reactjs-router/",
+    "practice": "https://reactrouter.com/en/main/start/tutorial"
+  },
+  {
+    "id": 34,
+    "question": "Explain the Event Loop in JavaScript",
+    "topic": "JavaScript",
+    "difficulty": "Hard",
+    "article": "https://www.geeksforgeeks.org/what-is-an-event-loop-in-javascript/",
+    "practice": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/EventLoop"
+  },
+  {
+    "id": 35,
+    "question": "What are JavaScript modules (import/export)?",
+    "topic": "JavaScript",
+    "difficulty": "Easy",
+    "article": "https://www.geeksforgeeks.org/javascript-modules/",
+    "practice": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules"
+  },
+  {
+    "id": 36,
+    "question": "Explain CSS preprocessors (SASS, LESS) and their benefits",
+    "topic": "CSS",
+    "difficulty": "Medium",
+    "article": "https://www.geeksforgeeks.org/css-preprocessor-sass/",
+    "practice": "https://sass-lang.com/guide"
+  },
+  {
+    "id": 37,
+    "question": "What is the useCallback and useMemo hooks in React?",
+    "topic": "React",
+    "difficulty": "Medium",
+    "article": "https://www.geeksforgeeks.org/react-js-usecallback-hook/",
+    "practice": "https://react.dev/reference/react/useCallback"
+  },
+  {
+    "id": 38,
+    "question": "Explain how to optimize React application performance",
+    "topic": "React",
+    "difficulty": "Hard",
+    "article": "https://www.geeksforgeeks.org/reactjs-optimization-techniques/",
+    "practice": "https://react.dev/learn/render-and-commit"
+  },
+  {
+    "id": 39,
+    "question": "What is the difference between map, filter, and reduce in JavaScript?",
+    "topic": "JavaScript",
+    "difficulty": "Easy",
+    "article": "https://www.geeksforgeeks.org/javascript-array-methods/",
+    "practice": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array"
+  },
+  {
+    "id": 40,
+    "question": "Explain CSS custom properties (CSS variables)",
+    "topic": "CSS",
+    "difficulty": "Easy",
+    "article": "https://www.geeksforgeeks.org/css-variables/",
+    "practice": "https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties"
+  },
+  {
+    "id": 41,
+    "question": "What is TypeScript and what are its advantages?",
+    "topic": "TypeScript",
+    "difficulty": "Easy",
+    "article": "https://www.geeksforgeeks.org/introduction-to-typescript/",
+    "practice": "https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html"
+  },
+  {
+    "id": 42,
+    "question": "Explain the call, apply, and bind methods in JavaScript",
+    "topic": "JavaScript",
+    "difficulty": "Medium",
+    "article": "https://www.geeksforgeeks.org/difference-between-call-apply-and-bind-method-in-javascript/",
+    "practice": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call"
+  },
+  {
+    "id": 43,
+    "question": "What is Server-Side Rendering (SSR) and how does Next.js implement it?",
+    "topic": "React",
+    "difficulty": "Hard",
+    "article": "https://www.geeksforgeeks.org/server-side-rendering-ssr/",
+    "practice": "https://nextjs.org/docs/basic-features/pages"
+  },
+  {
+    "id": 44,
+    "question": "Explain the concept of Web Components",
+    "topic": "JavaScript",
+    "difficulty": "Medium",
+    "article": "https://www.geeksforgeeks.org/web-components/",
+    "practice": "https://developer.mozilla.org/en-US/docs/Web/Web_Components"
+  },
+  {
+    "id": 45,
+    "question": "What is the Document Object Model (DOM)?",
+    "topic": "JavaScript",
+    "difficulty": "Easy",
+    "article": "https://www.geeksforgeeks.org/dom-document-object-model/",
+    "practice": "https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model"
+  },
+  {
+    "id": 46,
+    "question": "Explain CSS BEM (Block Element Modifier) methodology",
+    "topic": "CSS",
+    "difficulty": "Easy",
+    "article": "https://www.geeksforgeeks.org/bem-methodology-in-css/",
+    "practice": "https://getbem.com/introduction/"
+  },
+  {
+    "id": 47,
+    "question": "What are Progressive Web Apps (PWA)?",
+    "topic": "JavaScript",
+    "difficulty": "Medium",
+    "article": "https://www.geeksforgeeks.org/progressive-web-apps/",
+    "practice": "https://web.dev/progressive-web-apps/"
+  },
+  {
+    "id": 48,
+    "question": "Explain lazy loading and code splitting in React",
+    "topic": "React",
+    "difficulty": "Medium",
+    "article": "https://www.geeksforgeeks.org/lazy-loading-in-react/",
+    "practice": "https://react.dev/reference/react/lazy"
+  },
+  {
+    "id": 49,
+    "question": "What is Webpack and what problem does it solve?",
+    "topic": "JavaScript",
+    "difficulty": "Medium",
+    "article": "https://www.geeksforgeeks.org/webpack/",
+    "practice": "https://webpack.js.org/concepts/"
+  },
+  {
+    "id": 50,
+    "question": "Explain accessibility (a11y) best practices in web development",
+    "topic": "HTML",
+    "difficulty": "Medium",
+    "article": "https://www.geeksforgeeks.org/web-accessibility/",
+    "practice": "https://www.w3.org/WAI/fundamentals/accessibility-intro/"
+  },
+  {
+    "id": 51,
+    "question": "What are Custom Hooks in React and how to create them?",
+    "topic": "React",
+    "difficulty": "Medium",
+    "article": "https://www.geeksforgeeks.org/reactjs-custom-hooks/",
+    "practice": "https://react.dev/learn/reusing-logic-with-custom-hooks"
+  },
+  {
+    "id": 52,
+    "question": "Explain the difference between px, em, rem, %, and vh/vw in CSS",
+    "topic": "CSS",
+    "difficulty": "Easy",
+    "article": "https://www.geeksforgeeks.org/css-units/",
+    "practice": "https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Values_and_units"
+  },
+  {
+    "id": 53,
+    "question": "What is the Same-Origin Policy and how does it relate to web security?",
+    "topic": "JavaScript",
+    "difficulty": "Medium",
+    "article": "https://www.geeksforgeeks.org/same-origin-policy/",
+    "practice": "https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy"
+  },
+  {
+    "id": 54,
+    "question": "Explain form validation in HTML5",
+    "topic": "HTML",
+    "difficulty": "Easy",
+    "article": "https://www.geeksforgeeks.org/html5-form-validation/",
+    "practice": "https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation"
+  },
+  {
+    "id": 55,
+    "question": "What is React.memo and when should you use it?",
+    "topic": "React",
+    "difficulty": "Medium",
+    "article": "https://www.geeksforgeeks.org/reactjs-memo/",
+    "practice": "https://react.dev/reference/react/memo"
+  },
+  {
+    "id": 56,
+    "question": "Explain JavaScript template literals and tagged templates",
+    "topic": "JavaScript",
+    "difficulty": "Easy",
+    "article": "https://www.geeksforgeeks.org/javascript-template-literals/",
+    "practice": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals"
+  },
+  {
+    "id": 57,
+    "question": "What is CSS-in-JS and popular libraries like styled-components?",
+    "topic": "CSS",
+    "difficulty": "Medium",
+    "article": "https://www.geeksforgeeks.org/what-is-css-in-js/",
+    "practice": "https://styled-components.com/docs"
+  },
+  {
+    "id": 58,
+    "question": "Explain error boundaries in React",
+    "topic": "React",
+    "difficulty": "Medium",
+    "article": "https://www.geeksforgeeks.org/react-js-error-boundaries/",
+    "practice": "https://react.dev/reference/react/Component#catching-rendering-errors-with-an-error-boundary"
+  },
+  {
+    "id": 59,
+    "question": "What are Web Workers and when would you use them?",
+    "topic": "JavaScript",
+    "difficulty": "Hard",
+    "article": "https://www.geeksforgeeks.org/web-workers-in-javascript/",
+    "practice": "https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API"
+  },
+  {
+    "id": 60,
+    "question": "Explain the concept of Hoisting in JavaScript",
+    "topic": "JavaScript",
+    "difficulty": "Medium",
+    "article": "https://www.geeksforgeeks.org/javascript-hoisting/",
+    "practice": "https://developer.mozilla.org/en-US/docs/Glossary/Hoisting"
+  }
+]
